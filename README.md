@@ -8,3 +8,5 @@ Todo lo que está aquí adentro es antes de que se procese todo para que funcion
 -JS uglify
 -CSS minify
 -IMG minify
+#SEO
+Agregar el meta description, metas de redes sociales y demás. SITEMAP

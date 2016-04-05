@@ -212,12 +212,29 @@
 	"buffers":
 	[
 		{
-			"file": ".gitignore",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 32,
+				"buffer_size": 1346,
 				"line_ending": "Unix",
-				"name": ".gitignore"
+				"name": "index.html"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 440,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/main.styl",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "main.styl"
 			}
 		}
 	],
@@ -228,16 +245,20 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 354.0,
-		"last_filter": "insta",
+		"height": 294.0,
+		"last_filter": "instal",
 		"selected_items":
 		[
 			[
-				"insta",
+				"instal",
 				"Package Control: Install Package"
 			],
 			[
-				"instal",
+				"beaut",
+				"HTMLBeautify"
+			],
+			[
+				"insta",
 				"Package Control: Install Package"
 			],
 			[
@@ -258,10 +279,6 @@
 			],
 			[
 				"beau",
-				"HTMLBeautify"
-			],
-			[
-				"beaut",
 				"HTMLBeautify"
 			],
 			[
@@ -290,10 +307,22 @@
 	},
 	"expanded_folders":
 	[
-		"/git_repositorios/experiments/carne-y-hueso"
+		"/git_repositorios/experiments/carne-y-hueso",
+		"/git_repositorios/experiments/carne-y-hueso/js",
+		"/git_repositorios/experiments/carne-y-hueso/js/libs"
 	],
 	"file_history":
 	[
+		"/git_repositorios/experiments/carne-y-hueso/.gitignore",
+		"/git_repositorios/experiments/carne-y-hueso/assets/stylus/main.styl",
+		"/git_repositorios/experiments/carne-y-hueso/README.md",
+		"/git_repositorios/experiments/carne-y-hueso/user/themes/carneyhueso/carneyhueso.php",
+		"/git_repositorios/experiments/carne-y-hueso/user/themes/carneyhueso/templates/partials/base.html.twig",
+		"/git_repositorios/experiments/carne-y-hueso/user/themes/carneyhueso/carneyhueso.yaml",
+		"/git_repositorios/experiments/carne-y-hueso/user/pages/01.home/default.md",
+		"/git_repositorios/experiments/carne-y-hueso/user/pages/02.test/default.md",
+		"/git_repositorios/experiments/carne-y-hueso/system/config/system.yaml",
+		"/git_repositorios/experiments/carne-y-hueso/user/config/system.yaml",
 		"/git_repositorios/Vinte/vinte-site/resources/assets/sass/sections/developments.scss",
 		"/git_repositorios/Vinte/vinte-site/resources/assets/sass/sections/home.scss",
 		"/git_repositorios/Vinte/vinte-site/resources/assets/sass/sections/common.scss",
@@ -568,31 +597,89 @@
 			[
 				{
 					"buffer": 0,
-					"file": ".gitignore",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 32,
+						"buffer_size": 1346,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								32,
-								32
+								1265,
+								1265
 							]
 						],
 						"settings":
 						{
-							"auto_name": ".gitignore",
-							"syntax": "Packages/Materialize/Langs/Git.tmLanguage"
+							"auto_name": "index.html",
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 440,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								440,
+								440
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "stylus/main.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "main.styl",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
