@@ -305,12 +305,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/git_repositorios/experiments/carne-y-hueso",
-		"/git_repositorios/experiments/carne-y-hueso/js",
-		"/git_repositorios/experiments/carne-y-hueso/js/libs"
-	],
 	"file_history":
 	[
 		"/git_repositorios/experiments/carne-y-hueso/.gitignore",
@@ -615,7 +609,8 @@
 						"settings":
 						{
 							"auto_name": "index.html",
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
