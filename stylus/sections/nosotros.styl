@@ -1,0 +1,45 @@
+.us {
+	padding 0
+	height auto
+	width 100%
+	article{
+		align-items center
+		display flex
+		padding 0 2em
+		.left {
+			box-sizing border-box
+			height 100%
+			padding 1em 3em 1em 1em
+			h2{
+				margin-bottom 0.5em
+			}
+			p{
+				margin 1em 0
+				text-align justify
+			}
+			.btn{
+				background $color-cafe
+				color $color-blanco
+				cursor pointer
+				margin 0 auto
+				max-width 200px
+				padding 1em 2em
+				text-align center
+				text-transform uppercase
+				transition all 1s
+				width auto
+				&:hover{
+					background $color-dorado
+				}
+			}
+		}
+		.right {
+			padding 2em 0
+			overflow hidden
+			img{
+				height auto
+				width 100%
+			}
+		}
+	}
+}

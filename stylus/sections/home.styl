@@ -1,0 +1,45 @@
+.home {
+	height 100vh
+	position relative
+	width 100vw
+	h2{
+		display none
+	}
+	.bg-filter{
+		background rgba($color-cafe, .7)
+		height 100%
+		left 0
+		position absolute
+		top 0
+		width 100%
+		z-index 2
+	}
+	.main-logo{
+		left 50%
+		position absolute
+		top 50%
+		transform translate(-50%, -50%)
+		z-index 3
+		.home-logo{
+			height auto
+			width 300px
+		}
+	}
+	.slideshow-container{
+		height 100%
+		left 0
+		position absolute
+		top 0
+		width 100%
+		z-index 1
+		li{
+			background-size cover !important
+			background-attachment fixed !important
+			height 100%
+			left 0
+			positiona absolute
+			top 0
+			width 100%
+		}
+	}
+}

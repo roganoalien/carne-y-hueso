@@ -1,0 +1,46 @@
+header {
+	background transparent
+	height 80px
+	left 0
+	padding 0 2em
+	position fixed
+	top 0
+	width 100%
+	z-index 10
+	&.scrolled{
+		background $color-cafe
+	}
+	nav{
+		align-items center
+		display flex
+		justify-content space-between
+		height 100%
+		width 100%
+		.logo-horizontal{
+			h1{
+				color $color-blanco
+				font-size 30px
+			}
+		}
+		ul{
+			font-family $fuente-titulo
+			li{
+				display inline-block
+				a{
+					border-bottom 2px solid transparent
+					display block
+					color $color-blanco
+					height 100%
+					padding .5em 1em
+					text-decoration none
+					width 100%
+					transition all 1s ease
+					&.selected{
+						color $color-dorado
+						border-bottom 2px solid $color-dorado
+					}
+				}
+			}
+		}
+	}
+}

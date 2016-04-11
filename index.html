@@ -10,44 +10,90 @@
 	<link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
-	<header>
-		<nav>LOGO Y MENU DE NAVEGACION</nav>
-	</header>
-	<section class="home">
-		<article>
-			<h1>
-				INTRO CON IMAGEN DE FONDO Y LOGO CON ANIMACIÓN DE ENTRADA - METER UN PRELOADER / SLIDESHOW
-			</h1>
-		</article>
-	</section>
-	<section class="us">
-		<article>
-			<h2>
-				Nosotros resumen con link a ver más sobre ellos con misión visión y valores
-			</h2>
-		</article>
-	</section>
-	<section class="products">
-		<article>
-			<h2>
-				Nuestros Productos
-			</h2>
-			<div class="description">Descripción de los productos</div>
-			<div class="americans">Sección de cortes americanos</div>
-			<div class="mobile">PARRILLA MÓVIL</div>
-			<div class="complements">COMPLEMENTOS</div>
-		</article>
-	</section>
-	<section class="contact">
-		<article>
-			<h2>
-				Contacto
-			</h2>
-		</article>
-	</section>
-	<footer>
-		AVISO LINKS Y DEMÁS
-	</footer>
+	<div class="body-container" id="scroller">
+		<header>
+			<nav>
+				<div class="logo-horizontal">
+					<h1>De Carne y Hueso</h1>
+					<img src="" alt="" class="logo-horizontal">
+				</div>
+				<ul>
+					<li><a href="#inicio" class="selected">inicio</a></li>
+					<li><a href="#nosotros">nosotros</a></li>
+					<li><a href="#servicios">servicios</a></li>
+					<li><a href="#contacto">contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="home" id="inicio">
+			<article>
+				<h2>Inicio</h2>
+				<div class="bg-filter"></div>
+				<ul class="slideshow-container">
+					<li style="background: url(/img/not-optimized/home-slide01.jpg) no-repeat center center;"></li>
+				</ul>
+				<div class="main-logo">
+					<img src="/img/logo-white.png" alt="De Carne y Hueso Logo" class="home-logo">
+				</div>
+			</article>
+		</section>
+		<section class="us" id="nosotros">
+			<article>
+				<div class="left">
+					<h2>
+						Nosotros
+					</h2>
+					<p>
+						De carne y hueso nace por la pasión parrillera que han compartido 2 colegas durante años, cualquier pretexto ha sido bueno para prender el carbón, preparar la parrilla y disfrutar unos buenos cortes.
+					</p>
+					<p>
+						Esa pasión nos ha llevado a distribuir la mejor carne 100% regia a nuestro estado con un servicio de calidad y un concepto único.
+					</p>
+					<div class="btn">
+						Leer más
+					</div>
+				</div>
+				<div class="right">
+					<img src="/img/not-optimized/nosotros.jpg" alt="Nosotros">
+				</div>
+			</article>
+		</section>
+		<section class="products" id="servicios">
+			<article class="products-title">
+				<h2>
+					Servicios
+				</h2>
+				<div class="bg-images-overlay">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="bg-images">
+					<img src="/img/not-optimized/servicios01.jpg" alt="">
+					<img src="/img/not-optimized/servicios02.jpg" alt="">
+					<img src="/img/not-optimized/servicios03.jpg" alt="">
+				</div>
+			</article>
+			<article class="products-description">
+				<div class="description">Descripción de los productos</div>
+				<div class="americans">Sección de cortes americanos</div>
+				<div class="mobile">PARRILLA MÓVIL</div>
+				<div class="complements">COMPLEMENTOS</div>
+			</article>
+		</section>
+		<section class="contact" id="contacto">
+			<article>
+				<h2>
+					Contacto
+				</h2>
+			</article>
+		</section>
+		<footer>
+			AVISO LINKS Y DEMÁS
+		</footer>
+	</div>
 	<script src="/js/libs/jquery-2.2.2.min.js"></script>
 </body>
 </html>
