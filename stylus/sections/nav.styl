@@ -1,5 +1,6 @@
 header {
 	background transparent
+	border-bottom 2px solid transparent
 	height 80px
 	left 0
 	padding 0 2em
@@ -8,7 +9,11 @@ header {
 	width 100%
 	z-index 10
 	&.scrolled{
-		background $color-cafe
+		background $color-blanco
+		border-bottom 2px solid $color-cafe
+		a{
+			color $color-cafe
+		}
 	}
 	nav{
 		align-items center
@@ -24,7 +29,7 @@ header {
 			}
 			.logo-horizontal-img{
 				height auto
-				width 80px
+				width 70px
 			}
 		}
 		ul{
