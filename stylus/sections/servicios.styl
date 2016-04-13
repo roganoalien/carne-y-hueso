@@ -3,6 +3,14 @@
 	padding 0
 	margin 0
 	width 100%
+	h3{
+		color $color-dorado
+		font-family $fuente-titulo
+		font-size 45px
+		font-weight 700
+		text-align center
+		text-transform uppercase
+	}
 	.products-title{
 		height 400px
 		margin 0
@@ -62,7 +70,7 @@
 	}
 	.products-description{
 		padding 2em
-		h2{
+		h3{
 			text-align center
 		}
 		p{
@@ -73,6 +81,9 @@
 		.golden-span{
 			color $color-dorado
 		}
+		.small{
+			font-size: .7em
+		}
 	}
 	.cuts-container{
 		align-items center
@@ -82,6 +93,7 @@
 		justify-content center
 		height 60vh
 		margin 0
+		max-height 395px
 		padding 0
 		width 100%
 		li{
@@ -106,7 +118,7 @@
 				width 100%
 				z-index 1
 			}
-			h3{
+			h4{
 				color $color-blanco
 				font-family $fuente-titulo
 				font-size 25px
@@ -122,28 +134,53 @@
 			}
 		}
 	}
-	// .rib-eye{
-	// 	align-items center
-	// 	display flex
-	// 	padding 0 2em
-	// 	.right{
-	// 		padding-left 2em
-	// 		text-align justify
-	// 		p{
-	// 			margin 1em 0
-	// 		}
-	// 	}
-	// }
-	// .t-bone{
-	// 	align-items center
-	// 	display flex
-	// 	padding 0 2em
-	// 	.left{
-	// 		padding-right 2em
-	// 		text-align justify
-	// 		p{
-	// 			margin 1em 0
-	// 		}
-	// 	}
-	// }
+	.parrilla{
+		align-items center
+		background $color-cafe
+		cursor pointer
+		display flex
+		justify-content center
+		height 40vh
+		margin 0
+		max-height 295px
+		padding 0
+		width 100%
+		li{
+			border-right 4px solid $color-blanco
+			height 100%
+			position relative
+			width 33.333%
+			&:last-child{
+				border-right 0 solid transparent
+			}
+			&:hover {
+				.item-image{
+					opacity 1
+				}
+			}
+			.item-image{
+				background-size cover !important
+				height 100%
+				opacity .5
+				position relative
+				transition opacity .25s ease-in-out
+				width 100%
+				z-index 1
+			}
+			h4{
+				color $color-blanco
+				font-family $fuente-titulo
+				font-size 25px
+				font-weight 700
+				left 50%
+				position absolute
+				text-align center
+				text-shadow 3px 3px $color-cafe
+				top 50%
+				transform translate(-50%, -50%)
+				width 100%
+				z-index 2
+			}
+		}
+	}
 }

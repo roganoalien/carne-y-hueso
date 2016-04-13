@@ -1,0 +1,68 @@
+.contact {
+	padding 2em
+	article{
+		align-items center
+		display flex
+		.right{
+			padding-left 2em
+		}
+		form{
+			align-items center
+			// background red
+			display flex
+			flex-wrap wrap
+			justify-content center
+			padding 1em
+			input{
+				font-family $fuente-texto
+				font-size 16px
+				background rgba($color-cafe, .1)
+				border 0
+				margin .5em 0
+				outline none
+				padding 1em
+				&:focus{
+					background rgba($color-dorado, .15)
+				}
+			}
+			textarea{
+				font-family $fuente-texto
+				font-size 16px
+				height 100px
+				background rgba($color-cafe, .1)
+				border 0
+				margin .5em 0
+				outline none
+				padding 1em
+			}
+			.half-centered{
+				background $color-cafe
+				color $color-blanco
+				cursor pointer
+				font-family $fuente-titulo
+				margin .5em auto 0
+				max-width 200px
+				padding 1em 2em
+				text-align center
+				text-transform uppercase
+				transition all 1s
+				width 50%
+				&:hover{
+					background $color-dorado
+				}
+			}
+			.left{
+				margin-right 1%
+				width 49%
+			}
+			.right{
+				margin-left 1%
+				width 49%
+			}
+			.hundred,
+			.hundredtext{
+				width 100%
+			}
+		}
+	}
+}
