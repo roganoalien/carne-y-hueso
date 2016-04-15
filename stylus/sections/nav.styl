@@ -9,31 +9,30 @@ header {
 	width 100%
 	z-index 10
 	&.scrolled{
-		background $color-blanco
-		border-bottom 2px solid $color-cafe
+		background url('/build/img/bg.png')
+		// border-bottom 2px solid $color-cafe
 		a{
 			color $color-cafe
 		}
 	}
 	nav{
-		align-items center
+		// align-items center
 		display flex
-		justify-content space-between
+		justify-content space-around
 		height 100%
 		width 100%
 		.logo-horizontal{
 			h1{
-				color $color-blanco
 				display none
-				font-size 30px
 			}
 			.logo-horizontal-img{
 				height auto
-				width 70px
+				width 140px
 			}
 		}
 		ul{
-			font-family $fuente-titulo
+			font-family $fuente-titulo-secundario
+			padding 1.35em 0
 			li{
 				display inline-block
 				a{
