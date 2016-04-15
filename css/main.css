@@ -4320,7 +4320,7 @@ header nav ul li a.selected {
 .home .main-logo {
   left: 50%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -4388,7 +4388,7 @@ header nav ul li a.selected {
   background: url("/build/img/parrilleros-fondo.jpg") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
-  height: 1000px;
+  height: 1500px;
 }
 .products {
   height: auto;
