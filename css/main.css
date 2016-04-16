@@ -121,6 +121,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@charset "UTF-8";
 /*
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
@@ -4204,7 +4205,7 @@ body .body-container {
   width: 100%;
 }
 body .body-container h2 {
-  color: #b1841d;
+  color: #382e2a;
   font-family: "american", sans-serif;
   font-size: 45px;
   font-weight: 700;
@@ -4213,6 +4214,9 @@ body .body-container h2 {
 }
 body .body-container p {
   line-height: 1.2;
+  margin: 1em auto;
+  text-align: center;
+  width: 40%;
 }
 body .body-container .brush-down {
   bottom: 0;
@@ -4228,6 +4232,9 @@ body .body-container .brush-up {
   top: 0;
   width: 100%;
 }
+body .body-container .golden-span {
+  color: #b1841d;
+}
 body .body-container .left,
 body .body-container .right {
   width: 50%;
@@ -4238,19 +4245,44 @@ body .body-container .right img {
   width: 100%;
 }
 body .body-container footer {
-  background: #382e2a;
-  color: #fff;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #382e2a;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 2em;
-  text-align: center;
+  width: 100%;
 }
 body .body-container footer img {
   height: auto;
-  margin: 0 0 1em 0;
   width: 70px;
 }
 body .body-container footer a {
+  margin-right: 1em;
+}
+body .body-container footer a:last-child {
+  margin-right: 0;
+}
+body .body-container footer .footer-contact {
+  width: 230px;
+}
+body .body-container footer .footer-contact p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+body .body-container footer .footer-contact p .golden {
   color: #b1841d;
-  display: block;
+}
+body .body-container footer .rights {
+  margin: 0;
+  width: auto;
 }
 header {
   background: transparent;
@@ -4270,7 +4302,6 @@ header.scrolled a {
   color: #382e2a;
 }
 header nav {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4302,8 +4333,7 @@ header nav ul li a {
   padding: 0.5em 1em;
   text-decoration: none;
   width: 100%;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
+  transition: all 1s ease;
 }
 header nav ul li a.selected {
   color: #b1841d;
@@ -4359,10 +4389,15 @@ header nav ul li a.selected {
   color: #382e2a;
   margin: 0 0 1em;
 }
-.us article p {
-  margin: 1em auto;
-  text-align: center;
-  width: 40%;
+.us article .pointer {
+  height: auto;
+  left: 50%;
+  position: absolute;
+  top: -35px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
 }
 .us article .floating-knife {
   height: auto;
@@ -4384,11 +4419,25 @@ header nav ul li a.selected {
           transform: translateY(-50%);
   width: 400px;
 }
+.us .us-info {
+  padding-top: 1em;
+}
 .us .us-owners {
   background: url("/build/img/parrilleros-fondo.jpg") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
-  height: 1500px;
+  height: 1000px;
+  position: relative;
+}
+.us .us-owners .parrilleros-title {
+  height: auto;
+  left: 50%;
+  position: absolute;
+  top: 13em;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 550px;
 }
 .products {
   height: auto;
@@ -4396,247 +4445,128 @@ header nav ul li a.selected {
   margin: 0;
   width: 100%;
 }
-.products h3 {
+.products h2 {
+  margin: 0 auto 1em;
+  width: 40%;
+}
+.products .american-cuts {
+  padding-bottom: 3em;
+  position: relative;
+}
+.products .american-cuts .floating-meat {
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 400px;
+}
+.products .american-cuts .floating-pepper {
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 400px;
+}
+.products .american-cuts .cuts-display {
+  height: auto;
+  margin: 0 auto;
+  width: 50%;
+}
+.products .american-cuts .cuts-display .display-titles {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+.products .american-cuts .cuts-display .display-titles li {
+  font-family: "american", sans-serif;
+  font-size: 20px;
+  margin-right: 1em;
+  text-align: center;
+  width: 25%;
+}
+.products .american-cuts .cuts-display .display-titles li:last-child {
+  margin-right: 0;
+}
+.products .american-cuts .cuts-display .display-cuts {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.products .american-cuts .cuts-display .display-cuts li {
+  cursor: pointer;
+  margin-right: 1em;
+  text-align: center;
+  width: 25%;
+}
+.products .american-cuts .cuts-display .display-cuts li:last-child {
+  margin-right: 0;
+}
+.products .american-cuts .cuts-display .display-cuts li img {
+  height: auto;
+  width: 100%;
+}
+.products .parrilla {
+  background: url("/build/img/parrilla-movil.jpg") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: auto;
+  padding: 4em 0 14em;
+  position: relative;
+}
+.products .parrilla h3 {
   color: #b1841d;
   font-family: "american", sans-serif;
   font-size: 45px;
-  font-weight: 700;
+  margin: 4.5em auto 1em;
   text-align: center;
   text-transform: uppercase;
 }
-.products .products-title {
-  height: 400px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-}
-.products .products-title h2 {
+.products .parrilla p {
   color: #fff;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 3;
 }
-.products .products-title .bg-images-overlay {
-  height: 400px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-}
-.products .products-title .bg-images-overlay ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-}
-.products .products-title .bg-images-overlay ul li {
-  background: rgba(56,46,42,0.5);
-  height: 100%;
-  margin: 0 1%;
-  width: 32.666%;
-}
-.products .products-title .bg-images-overlay ul li:first-child {
-  margin: 0 0 0 0;
-}
-.products .products-title .bg-images-overlay ul li:last-child {
-  margin: 0 0 0 0;
-}
-.products .products-title .bg-images {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 400px;
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-.products .products-title .bg-images img {
-  height: auto;
-  margin: 0 1%;
-  width: 32.666%;
-}
-.products .products-title .bg-images img:first-child {
-  margin: 0 0 0 0;
-}
-.products .products-title .bg-images img:last-child {
-  margin: 0 0 0 0;
-}
-.products .products-description {
-  padding: 2em;
-}
-.products .products-description h3 {
-  text-align: center;
-}
-.products .products-description p {
-  margin: 1em auto;
-  text-align: justify;
-  width: 50%;
-}
-.products .products-description .golden-span {
+.products .parrilla .golden-span {
   color: #b1841d;
-}
-.products .products-description .small {
-  font-size: 0.7em;
-}
-.products .cuts-container {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #382e2a;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 60vh;
-  margin: 0;
-  max-height: 395px;
-  padding: 0;
-  width: 100%;
-}
-.products .cuts-container li {
-  border-right: 4px solid #fff;
-  height: 100%;
-  position: relative;
-  width: 25%;
-}
-.products .cuts-container li:last-child {
-  border-right: 0 solid transparent;
-}
-.products .cuts-container li:hover .cut-image {
-  opacity: 1;
-}
-.products .cuts-container li .cut-image {
-  background-size: cover !important;
-  height: 100%;
-  opacity: 0.5;
-  position: relative;
-  -webkit-transition: opacity 0.25s ease-in-out;
-          transition: opacity 0.25s ease-in-out;
-  width: 100%;
-  z-index: 1;
-}
-.products .cuts-container li h4 {
-  color: #fff;
-  font-family: "american", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  text-shadow: 3px 3px #382e2a;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
-  z-index: 2;
-}
-.products .parrilla {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #382e2a;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 40vh;
-  margin: 0;
-  max-height: 295px;
-  padding: 0;
-  width: 100%;
-}
-.products .parrilla li {
-  border-right: 4px solid #fff;
-  height: 100%;
-  position: relative;
-  width: 33.333%;
-}
-.products .parrilla li:last-child {
-  border-right: 0 solid transparent;
-}
-.products .parrilla li:hover .item-image {
-  opacity: 1;
-}
-.products .parrilla li .item-image {
-  background-size: cover !important;
-  height: 100%;
-  opacity: 0.5;
-  position: relative;
-  -webkit-transition: opacity 0.25s ease-in-out;
-          transition: opacity 0.25s ease-in-out;
-  width: 100%;
-  z-index: 1;
-}
-.products .parrilla li h4 {
-  color: #fff;
-  font-family: "american", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  text-shadow: 3px 3px #382e2a;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
-  z-index: 2;
 }
 .contact {
   padding: 2em;
 }
-.contact article {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.contact article h2 {
+  margin-bottom: 1em;
 }
 .contact article .right {
   padding-left: 2em;
 }
 .contact article form {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
   padding: 1em;
+  width: 50%;
 }
 .contact article form input {
   font-family: "geared", sans-serif;
@@ -4660,6 +4590,9 @@ header nav ul li a.selected {
   outline: none;
   padding: 1em;
 }
+.contact article form textarea:focus {
+  background: rgba(177,132,29,0.15);
+}
 .contact article form .half-centered {
   background: #382e2a;
   color: #fff;
@@ -4670,8 +4603,7 @@ header nav ul li a.selected {
   padding: 1em 2em;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all 1s;
-          transition: all 1s;
+  transition: all 1s;
   width: 50%;
 }
 .contact article form .half-centered:hover {

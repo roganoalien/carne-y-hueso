@@ -1,8 +1,11 @@
 .contact {
 	padding 2em
 	article{
-		align-items center
-		display flex
+		h2{
+			margin-bottom 1em
+		}
+		// align-items center
+		// display flex
 		.right{
 			padding-left 2em
 		}
@@ -12,7 +15,9 @@
 			display flex
 			flex-wrap wrap
 			justify-content center
+			margin 0 auto
 			padding 1em
+			width 50%
 			input{
 				font-family $fuente-texto
 				font-size 16px
@@ -34,6 +39,9 @@
 				margin .5em 0
 				outline none
 				padding 1em
+				&:focus{
+					background rgba($color-dorado, .15)
+				}
 			}
 			.half-centered{
 				background $color-cafe

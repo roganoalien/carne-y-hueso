@@ -3,184 +3,89 @@
 	padding 0
 	margin 0
 	width 100%
-	h3{
-		color $color-dorado
-		font-family $fuente-titulo
-		font-size 45px
-		font-weight 700
-		text-align center
-		text-transform uppercase
+	h2{
+		margin 0 auto 1em
+		width 40%
 	}
-	.products-title{
-		height 400px
-		margin 0
-		padding 0
+	.american-cuts{
+		padding-bottom 3em
 		position relative
-		width 100%
-		h2{
-			color $color-blanco
-			left 50%
+		.floating-meat{
+			height auto
 			position absolute
+			right 0
 			top 50%
-			transform translate(-50%, -50%)
-			z-index 3
+			transform translateY(-50%)
+			width 400px
 		}
-		.bg-images-overlay{
-			height 400px
+		.floating-pepper{
+			height auto
 			left 0
 			position absolute
-			top 0
-			width 100%
-			z-index 2
-			ul{
-				display flex
-				height 100%
-				li{
-					background rgba($color-cafe, .5)
-					height 100%
-					margin 0 1%
-					width 32.666%
-					&:first-child{
-						margin 0 0 0 0
-					}
-					&:last-child{
-						margin 0 0 0 0
-					}
-				}
-			}
+			top 50%
+			transform translateY(-50%)
+			width 400px
 		}
-		.bg-images{
-			display flex
-			height 400px
-			position relative
-			width 100%
-			z-index 1
-			img{
-				height auto
-				margin 0 1%
-				width 32.666%
-				&:first-child{
-					margin 0 0 0 0
-				}
-				&:last-child{
-					margin 0 0 0 0
-				}
-			}
-		}
-	}
-	.products-description{
-		padding 2em
-		h3{
-			text-align center
-		}
-		p{
-			margin 1em auto
-			text-align justify
+		.cuts-display{
+			height auto
+			margin 0 auto
 			width 50%
-		}
-		.golden-span{
-			color $color-dorado
-		}
-		.small{
-			font-size: .7em
-		}
-	}
-	.cuts-container{
-		align-items center
-		background $color-cafe
-		cursor pointer
-		display flex
-		justify-content center
-		height 60vh
-		margin 0
-		max-height 395px
-		padding 0
-		width 100%
-		li{
-			border-right 4px solid $color-blanco
-			height 100%
-			position relative
-			width 25%
-			&:last-child{
-				border-right 0 solid transparent
-			}
-			&:hover {
-				.cut-image{
-					opacity 1
+			.display-titles{
+				align-items center
+				display flex
+				margin-bottom .5em
+				width 100%
+				li{
+					font-family $fuente-titulo
+					font-size 20px
+					margin-right 1em
+					text-align center
+					width 25%
+					&:last-child{
+						margin-right 0
+					}
 				}
 			}
-			.cut-image{
-				background-size cover !important
-				height 100%
-				opacity .5
-				position relative
-				transition opacity .25s ease-in-out
+			.display-cuts{
+				align-items center
+				display flex
 				width 100%
-				z-index 1
-			}
-			h4{
-				color $color-blanco
-				font-family $fuente-titulo
-				font-size 25px
-				font-weight 700
-				left 50%
-				position absolute
-				text-align center
-				text-shadow 3px 3px $color-cafe
-				top 50%
-				transform translate(-50%, -50%)
-				width 100%
-				z-index 2
+				li{
+					cursor pointer
+					margin-right 1em
+					text-align center
+					width 25%
+					&:last-child{
+						margin-right 0
+					}
+					img{
+						height auto
+						width 100%
+					}
+				}
 			}
 		}
 	}
 	.parrilla{
-		align-items center
-		background $color-cafe
-		cursor pointer
-		display flex
-		justify-content center
-		height 40vh
-		margin 0
-		max-height 295px
-		padding 0
-		width 100%
-		li{
-			border-right 4px solid $color-blanco
-			height 100%
-			position relative
-			width 33.333%
-			&:last-child{
-				border-right 0 solid transparent
-			}
-			&:hover {
-				.item-image{
-					opacity 1
-				}
-			}
-			.item-image{
-				background-size cover !important
-				height 100%
-				opacity .5
-				position relative
-				transition opacity .25s ease-in-out
-				width 100%
-				z-index 1
-			}
-			h4{
-				color $color-blanco
-				font-family $fuente-titulo
-				font-size 25px
-				font-weight 700
-				left 50%
-				position absolute
-				text-align center
-				text-shadow 3px 3px $color-cafe
-				top 50%
-				transform translate(-50%, -50%)
-				width 100%
-				z-index 2
-			}
+		background url('/build/img/parrilla-movil.jpg') no-repeat center center
+		background-attachment fixed
+		background-size cover
+		height auto
+		padding 4em 0 14em
+		position relative
+		h3{
+			color $color-dorado
+			font-family $fuente-titulo
+			font-size 45px
+			margin 4.5em auto 1em
+			text-align center
+			text-transform uppercase
+		}
+		p{
+			color $color-blanco
+		}
+		.golden-span{
+			color $color-dorado
 		}
 	}
 }

@@ -16,7 +16,7 @@ body {
 		position relative
 		width 100%
 		h2{
-			color $color-dorado
+			color $color-cafe
 			font-family $fuente-titulo
 			font-size 45px
 			font-weight 700
@@ -25,6 +25,9 @@ body {
 		}
 		p{
 			line-height 1.2
+			margin 1em auto
+			text-align center
+			width 40%
 		}
 		.brush-down{
 			bottom 0
@@ -40,6 +43,9 @@ body {
 			top 0
 			width 100%
 		}
+		.golden-span{
+			color $color-dorado
+		}
 		.left
 		.right{
 			width 50%
@@ -49,18 +55,37 @@ body {
 			}
 		}
 		footer{
-			background $color-cafe
-			color $color-blanco
+			align-items center
+			color $color-cafe
+			display flex
+			justify-content center
 			padding 2em
-			text-align center
+			width 100%
 			img{
 				height auto
-				margin 0 0 1em 0
 				width 70px
 			}
 			a{
-				color $color-dorado
-				display block
+				margin-right 1em
+				&:last-child{
+					margin-right 0
+				}
+			}
+			.footer-contact{
+				width 230px
+				p{
+					margin 0
+					padding 0
+					text-align left
+					width 100%
+					.golden{
+						color $color-dorado
+					}
+				}
+			}
+			.rights{
+				margin 0
+				width auto
 			}
 		}
 	}
