@@ -121,7 +121,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@charset "UTF-8";
 /*
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
@@ -4195,12 +4194,13 @@ body {
   color: #382e2a;
   font-family: "geared", sans-serif;
   font-size: 18px;
-  height: auto;
+  height: 100vh;
   overflow-x: hidden;
   width: 100%;
 }
 body .body-container {
-  height: auto;
+  height: 100vh;
+  overflow: auto;
   position: relative;
   width: 100%;
 }
@@ -4245,13 +4245,16 @@ body .body-container .right img {
   width: 100%;
 }
 body .body-container footer {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   color: #382e2a;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4302,6 +4305,7 @@ header.scrolled a {
   color: #382e2a;
 }
 header nav {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4333,7 +4337,8 @@ header nav ul li a {
   padding: 0.5em 1em;
   text-decoration: none;
   width: 100%;
-  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
 }
 header nav ul li a.selected {
   color: #b1841d;
@@ -4343,9 +4348,6 @@ header nav ul li a.selected {
   height: 100vh;
   position: relative;
   width: 100vw;
-}
-.home .brush-down {
-  z-index: 2;
 }
 .home .main-logo {
   left: 50%;
@@ -4366,7 +4368,6 @@ header nav ul li a.selected {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
 }
 .home .slideshow-container li {
   background-size: cover !important;
@@ -4479,9 +4480,11 @@ header nav ul li a.selected {
   width: 50%;
 }
 .products .american-cuts .cuts-display .display-titles {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4499,9 +4502,11 @@ header nav ul li a.selected {
   margin-right: 0;
 }
 .products .american-cuts .cuts-display .display-cuts {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4552,15 +4557,18 @@ header nav ul li a.selected {
   padding-left: 2em;
 }
 .contact article form {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4603,7 +4611,8 @@ header nav ul li a.selected {
   padding: 1em 2em;
   text-align: center;
   text-transform: uppercase;
-  transition: all 1s;
+  -webkit-transition: all 1s;
+          transition: all 1s;
   width: 50%;
 }
 .contact article form .half-centered:hover {
