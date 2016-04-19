@@ -30,6 +30,10 @@
 	<link rel="stylesheet" href="/css/perfect-scrollbar.css" />
 </head>
 <body>
+	<div class="loading-screen">
+		<img src="/build/img/meat-loader.svg" alt="Loader icon" />
+		<p>Cargando</p>
+	</div>
 	<div class="body-container" id="container">
 		<header>
 			<nav>
@@ -40,7 +44,8 @@
 				<ul>
 					<li><a href="#inicio" class="selected">inicio</a></li>
 					<li><a href="#nosotros">nosotros</a></li>
-					<li><a href="#servicios">servicios</a></li>
+					<li><a href="#cortes">cortes</a></li>
+					<li><a href="#parrilla">parrilla</a></li>
 					<li><a href="#contacto">contacto</a></li>
 				</ul>
 			</nav>
@@ -94,7 +99,7 @@
 				<img src="/build/img/brush_down.png" alt="Separador Brocha" class="brush-down">
 			</article>
 		</section>
-		<section class="products">
+		<section class="products" id="cortes">
 			<article class="american-cuts">
 				<h2>Cortes Americanos</h2>
 				<p>
@@ -134,7 +139,7 @@
 				<img src="/build/img/pimienta.png" alt="Pimienta de Carne y Hueso" class="floating-pepper">
 				<img src="/build/img/carne-cruda.png" alt="Carne de Carne y Hueso" class="floating-meat">
 			</article>
-			<article class="parrilla">
+			<article class="parrilla" id="parrilla">
 				<img src="/build/img/brush_up-2.png" alt="Separador Brocha arriba" class="brush-up">
 				<img src="/build/img/brush_down.png" alt="Separador Brocha arriba" class="brush-down">
 				<h3>Parrilla Movil</h3>
