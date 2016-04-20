@@ -1,31 +1,43 @@
 .loading-screen {
-	background url('/build/img/bg.png')
+	align-items center
+	background url('../build/img/bg.png')
 	background-color $color-blanco
 	background-repeat repeat
-	height 100vh
+	display flex
+	flex-direction column
+	height 100%
+	justify-content center
 	left 0
+	opacity 0
+	pointer-events none
 	position absolute
 	text-align center
 	top 0
-	width 100vw
+	width 100%
 	z-index 99
+	&.active{
+		opacity 1
+		pointer-events auto
+	}
 	img{
 		height auto
-		left 50%
-		margin 0 auto
-		position absolute
-		top 40%
-		width 20%
-		transform translate(-50%,-50%)
+		margin 0 auto 1em
+		opacity 0
+		width 10%
+		@media $lg{
+			width 20%
+		}
+		@media $medium-xs{
+			width 30%
+		}
+		@media $xxs{
+			width 40%
+		}
 	}
 	p{
-		left 0
 		font-family $fuente-titulo
 		font-size 30px
 		font-weight bold
-		position absolute
-		top 52%
-		transform translate(0,-50%)
 		width 100%
 	}
 }
