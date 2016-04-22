@@ -121,7 +121,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@charset "UTF-8";
 /*
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
@@ -4246,13 +4245,16 @@ body .body-container .right img {
   width: 100%;
 }
 body .body-container footer {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   color: #382e2a;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4286,19 +4288,24 @@ body .body-container footer .rights {
   width: auto;
 }
 .loading-screen {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   background: url("../build/img/bg.png");
   background-color: #fff;
   background-repeat: repeat;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4360,6 +4367,7 @@ header.scrolled a {
   color: #382e2a;
 }
 header nav {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4391,7 +4399,8 @@ header nav ul li a {
   padding: 0.5em 1em;
   text-decoration: none;
   width: 100%;
-  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
 }
 header nav ul li a.selected {
   color: #b1841d;
@@ -4476,7 +4485,7 @@ header nav ul li a.selected {
   padding-top: 1em;
 }
 .us .us-owners {
-  background: url("../build/img/parrilleros-fondo.jpg") no-repeat center center;
+  background: url("../build/img/parrilleros-fondo-resize.jpg") no-repeat center center;
   background-size: cover;
   height: 1000px;
   position: relative;
@@ -4531,9 +4540,11 @@ header nav ul li a.selected {
   width: 50%;
 }
 .products .american-cuts .cuts-display .display-titles {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4551,9 +4562,11 @@ header nav ul li a.selected {
   margin-right: 0;
 }
 .products .american-cuts .cuts-display .display-cuts {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4573,7 +4586,7 @@ header nav ul li a.selected {
   width: 100%;
 }
 .products .parrilla {
-  background: url("../build/img/parrilla-movil.jpg") no-repeat center center;
+  background: url("../build/img/parrilla-movil-resize.jpg") no-repeat center center;
   background-size: cover;
   background: transparent;
   height: auto;
@@ -4604,15 +4617,18 @@ header nav ul li a.selected {
   padding-left: 2em;
 }
 .contact article form {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4655,7 +4671,8 @@ header nav ul li a.selected {
   padding: 1em 2em;
   text-align: center;
   text-transform: uppercase;
-  transition: all 1s;
+  -webkit-transition: all 1s;
+          transition: all 1s;
   width: 50%;
 }
 .contact article form .half-centered:hover {
