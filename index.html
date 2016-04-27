@@ -34,15 +34,31 @@
 		<img src="build/img/meat-loader.svg" alt="Loader icon" />
 		<p class="animated infinite pulse">Cargando</p>
 	</div>
+	<div class="cut-popup">
+		<div class="popup-container">
+			<div class="t-bone">
+				<h4>T-Bone</h4>
+			</div>
+			<div class="new-york">
+				<h4>New York</h4>
+			</div>
+			<div class="rib-eye">
+				<h4>Rib Eye</h4>
+			</div>
+			<div class="sirloin">
+				<h4>Sirloin</h4>
+			</div>
+		</div>
+	</div>
 	<div class="body-container" id="container">
-		<header class="scrolled">
+		<header>
 			<nav>
 				<div class="logo-horizontal">
 					<h1>De Carne y Hueso</h1>
 					<img src="build/img/logo-menu.png" alt="De Carne y Hueso Logo Horizontal" class="logo-horizontal-img">
 				</div>
 				<ul>
-					<li><a href="#inicio" class="selected">inicio</a></li>
+					<li><a href="#inicio">inicio</a></li>
 					<li><a href="#nosotros">nosotros</a></li>
 					<li><a href="#cortes">cortes</a></li>
 					<li><a href="#parrilla">parrilla</a></li>
@@ -50,11 +66,11 @@
 				</ul>
 			</nav>
 		</header>
-		<section class="home" id="inicio">
+		<section class="home section-pos" id="inicio">
 			<article>
 				<!-- <div class="bg-filter"></div> -->
 				<ul class="slideshow-container">
-					<li style="background: url(build/img/slide-01.jpg) no-repeat center center;"></li>
+					<li style="background: url(build/img/slide-01-resize.jpg) no-repeat center center;"></li>
 				</ul>
 				<div class="main-logo">
 					<img src="build/img/logo-dorado.png" alt="De Carne y Hueso Logo" class="home-logo">
@@ -62,7 +78,7 @@
 				<img src="build/img/brush_down.png" alt="Separador Brocha" class="brush-down">
 			</article>
 		</section>
-		<section class="us" id="nosotros">
+		<section class="us section-pos" id="nosotros">
 			<article class="us-info">
 				<img src="build/img/mano.png" alt="Señalador" class="pointer">
 				<h2>Nosotros</h2>
@@ -99,7 +115,7 @@
 				<img src="build/img/brush_down.png" alt="Separador Brocha" class="brush-down">
 			</article>
 		</section>
-		<section class="products" id="cortes">
+		<section class="products section-pos" id="cortes">
 			<article class="american-cuts">
 				<h2>Cortes Americanos</h2>
 				<p>
@@ -122,16 +138,16 @@
 						<li>Sirloin</li>
 					</ul>
 					<ul class="display-cuts">
-						<li>
+						<li data-corte="t-bone">
 							<img src="build/img/tbone.jpg" alt="T-Bone" data-carne="tbone">
 						</li>
-						<li>
+						<li data-corte="new-york">
 							<img src="build/img/newyork.jpg" alt="New York" data-carne="newyork">
 						</li>
-						<li>
+						<li data-corte="rib-eye">
 							<img src="build/img/ribeye.jpg" alt="Rib Eye" data-carne="ribeye">
 						</li>
-						<li>
+						<li data-corte="sirloin">
 							<img src="build/img/sirloin.jpg" alt="Sirloin" data-carne="sirloin">
 						</li>
 					</ul>
@@ -139,7 +155,7 @@
 				<img src="build/img/pimienta.png" alt="Pimienta de Carne y Hueso" class="floating-pepper">
 				<img src="build/img/carne-cruda.png" alt="Carne de Carne y Hueso" class="floating-meat">
 			</article>
-			<article class="parrilla" id="parrilla">
+			<article class="parrilla section-pos" id="parrilla">
 				<img src="build/img/brush_up-2.png" alt="Separador Brocha arriba" class="brush-up">
 				<img src="build/img/brush_down.png" alt="Separador Brocha arriba" class="brush-down">
 				<h3>Parrilla Movil</h3>
@@ -157,7 +173,7 @@
 				</p>
 			</article>
 		</section>
-		<section class="contact" id="contacto">
+		<section class="contact section-pos" id="contacto">
 			<article>
 				<h2>
 					Contacto
