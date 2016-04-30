@@ -19,10 +19,10 @@
 			padding 1em
 			width 50%
 			input{
-				font-family $fuente-texto
-				font-size 16px
 				background rgba($color-cafe, .1)
 				border 0
+				font-family $fuente-texto
+				font-size 16px
 				margin .5em 0
 				outline none
 				padding 1em
@@ -30,11 +30,29 @@
 					background rgba($color-dorado, .15)
 				}
 			}
+			select{
+				background rgba($color-cafe, .1)
+				border none
+				border-radius 0
+				font-family $fuente-texto
+				font-size 16px
+				height 3em
+				margin .5em 0
+				outline none
+				padding 1em
+				-webkit-appearance none
+				&.right{
+					text-align center
+				}
+				&:focus{
+					background rgba($color-dorado, .15)
+				}
+			}
 			textarea{
+				background rgba($color-cafe, .1)
 				font-family $fuente-texto
 				font-size 16px
 				height 100px
-				background rgba($color-cafe, .1)
 				border 0
 				margin .5em 0
 				outline none

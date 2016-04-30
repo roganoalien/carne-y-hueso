@@ -4364,6 +4364,7 @@ header {
 }
 header.scrolled {
   background: url("../build/img/bg.png");
+  box-shadow: 0 2px 5px 7px rgba(56,46,42,0.1);
 }
 header.scrolled a {
   color: #382e2a;
@@ -4491,7 +4492,8 @@ header nav ul li a.selected {
   background: url("../build/img/parrilleros-fondo-resize.jpg") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
-  height: 1000px;
+  height: 1400px;
+  padding-top: 300px;
   position: relative;
 }
 .us .us-owners .parrilleros-title {
@@ -4503,6 +4505,57 @@ header nav ul li a.selected {
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   width: 550px;
+}
+.us .us-owners .the-owners {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  width: 70%;
+}
+.us .us-owners .the-owners .owner {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  height: auto;
+  width: 40%;
+}
+.us .us-owners .the-owners .owner .isaac,
+.us .us-owners .the-owners .owner .gus {
+  height: 702px;
+  width: auto;
+}
+.us .us-owners .the-owners .owner .isaac-txt {
+  height: auto;
+  margin: -50px auto 0;
+  width: 400px;
+}
+.us .us-owners .the-owners .owner .gus-txt {
+  height: auto;
+  margin: -50px auto 0;
+  width: 455px;
 }
 .products {
   height: auto;
@@ -4641,10 +4694,10 @@ header nav ul li a.selected {
   width: 50%;
 }
 .contact article form input {
-  font-family: "geared", sans-serif;
-  font-size: 16px;
   background: rgba(56,46,42,0.1);
   border: 0;
+  font-family: "geared", sans-serif;
+  font-size: 16px;
   margin: 0.5em 0;
   outline: none;
   padding: 1em;
@@ -4652,11 +4705,29 @@ header nav ul li a.selected {
 .contact article form input:focus {
   background: rgba(177,132,29,0.15);
 }
+.contact article form select {
+  background: rgba(56,46,42,0.1);
+  border: none;
+  border-radius: 0;
+  font-family: "geared", sans-serif;
+  font-size: 16px;
+  height: 3em;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  -webkit-appearance: none;
+}
+.contact article form select.right {
+  text-align: center;
+}
+.contact article form select:focus {
+  background: rgba(177,132,29,0.15);
+}
 .contact article form textarea {
+  background: rgba(56,46,42,0.1);
   font-family: "geared", sans-serif;
   font-size: 16px;
   height: 100px;
-  background: rgba(56,46,42,0.1);
   border: 0;
   margin: 0.5em 0;
   outline: none;
