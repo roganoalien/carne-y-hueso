@@ -31,18 +31,23 @@
 				}
 			}
 			select{
+				color rgba(black,.25)
 				background rgba($color-cafe, .1)
 				border none
 				border-radius 0
+				display none
 				font-family $fuente-texto
 				font-size 16px
 				height 3em
 				margin .5em 0
 				outline none
 				padding 1em
-				-webkit-appearance none
+				// -webkit-appearance none
 				&.right{
 					text-align center
+				}
+				&.show{
+					display block
 				}
 				&:focus{
 					background rgba($color-dorado, .15)
@@ -52,7 +57,7 @@
 				background rgba($color-cafe, .1)
 				font-family $fuente-texto
 				font-size 16px
-				height 100px
+				height 200px
 				border 0
 				margin .5em 0
 				outline none
@@ -88,6 +93,31 @@
 			.hundred,
 			.hundredtext{
 				width 100%
+			}
+			.add-selects{
+				border 2px solid green
+				border-radius 50%
+				color green
+				cursor pointer
+				font-size 35px
+				height 35px
+				margin .25em 0
+				opacity .5
+				padding 0
+				position relative
+				transition all 0.5s ease-in-out
+				width 35px
+				&:hover{
+					opacity 1
+				}
+				p{
+					left 50%
+					margin 0
+					padding 0
+					position absolute
+					top 50%
+					transform translate(-50%,-52.5%)
+				}
 			}
 		}
 	}

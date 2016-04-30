@@ -7,6 +7,7 @@ var CARNE = (function() {
 		// Eventos a iniciar
 		// CARNE.loader.init();
 		CARNE.nav.init(); //LLAMAR AL FINAL DEL LOADER
+		CARNE.scrollMagic.init();
 		CARNE.scroll.init(); //LLAMAR AL FINAL DEL LOADER
 		CARNE.cortes.init();
 	};
@@ -149,15 +150,78 @@ CARNE.scroll = (function() {
 		}
 	}
 })();
-CARNE.slideshow = (function(){
-	var _slideVars = function _slideVars(){};
+CARNE.contact = (function(){
+	var _$addSelects,
+		_contador,
+		_$selectDos,
+		_$selectTres,
+		_adding,
+		_$selectCuatro;
+	var _slideVars = function _slideVars(){
+		_$addSelects = $('.add-selects');
+		_$selectDos = $('.second-to-select');
+		_$selectTres = $('.third-to-select');
+		_$selectCuatro = $('.four-to-select');
+		_contador = 0;
+		_adding = false;
+	};
 	var _slideEvents = function _slideEvents(){
-		alert("gola");
+		console.log("disparo contact events")
+		_$addSelects.on('click', function(){
+			if(_contador < 3){
+				_contador++;
+				_add();
+				_adding = false;
+			}
+		});
+	};
+	var _add = function _add(){
+		console.log(_contador);
+		if(!_adding){
+			_adding = true;
+			if(_contador == 1){
+				console.log("dos");
+				_$selectDos.addClass('show');
+			}
+			if(_contador == 2){
+				console.log("tres");
+				_$selectTres.addClass('show');
+			}
+			if(_contador == 3){
+				console.log("cuatro");
+				_$selectCuatro.addClass('show');
+			}
+		}
 	};
 	return{
 		init : function init(){
 			_slideVars();
 			_slideEvents();
+		}
+	}
+})();
+CARNE.scrollMagic = (function() {
+	var _$parallax1,
+		_$parallax2,
+		_$parallax3;
+	var _magicVars = function _magicVars(){
+		//variables del ScrollMagic
+		_$parallax1 = $('#parallax-one');
+		_$parallax2 = $('.us-owners');
+		_$parallax3 = $('#parrilla');
+	};
+	var _magicEvents = function _magicEvents(){
+		var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+		new ScrollMagic.Scene({triggerElement: "#nosotros"})
+							.setTween(_$parallax1, {y: "80%", ease: Linear.easeNone})
+							.addIndicators()
+							.addTo(controller);
+		var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+	};
+	return{
+		init : function init(){
+			// _magicVars();
+			// _magicEvents();
 		}
 	}
 })();

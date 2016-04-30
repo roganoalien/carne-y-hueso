@@ -121,6 +121,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@charset "UTF-8";
 /*
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
@@ -4245,16 +4246,13 @@ body .body-container .right img {
   width: 100%;
 }
 body .body-container footer {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   color: #382e2a;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4288,24 +4286,19 @@ body .body-container footer .rights {
   width: auto;
 }
 .loading-screen {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   background: url("../build/img/bg.png");
   background-color: #fff;
   background-repeat: repeat;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4357,8 +4350,7 @@ header {
   padding: 0 2em;
   position: fixed;
   top: 0;
-  -webkit-transition: all 1s;
-          transition: all 1s;
+  transition: all 1s;
   width: 100%;
   z-index: 9;
 }
@@ -4370,7 +4362,6 @@ header.scrolled a {
   color: #382e2a;
 }
 header nav {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4402,8 +4393,7 @@ header nav ul li a {
   padding: 0.5em 1em;
   text-decoration: none;
   width: 100%;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
+  transition: all 1s ease;
 }
 header nav ul li a.selected {
   color: #b1841d;
@@ -4442,6 +4432,13 @@ header nav ul li a.selected {
   positiona: absolute;
   top: 0;
   width: 100%;
+  -webkit-transform: translateZ(1);
+          transform: translateZ(1);
+}
+@media all and (max-width: 1024px) {
+  .home .slideshow-container li {
+    background-attachment: scroll !important;
+  }
 }
 .us {
   padding: 4em 0;
@@ -4495,6 +4492,13 @@ header nav ul li a.selected {
   height: 1400px;
   padding-top: 300px;
   position: relative;
+  -webkit-transform: translateZ(1);
+          transform: translateZ(1);
+}
+@media all and (max-width: 1024px) {
+  .us .us-owners {
+    background-attachment: scroll !important;
+  }
 }
 .us .us-owners .parrilleros-title {
   height: auto;
@@ -4507,15 +4511,12 @@ header nav ul li a.selected {
   width: 550px;
 }
 .us .us-owners .the-owners {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -4523,16 +4524,12 @@ header nav ul li a.selected {
   width: 70%;
 }
 .us .us-owners .the-owners .owner {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -4597,11 +4594,9 @@ header nav ul li a.selected {
   width: 50%;
 }
 .products .american-cuts .cuts-display .display-titles {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4619,11 +4614,9 @@ header nav ul li a.selected {
   margin-right: 0;
 }
 .products .american-cuts .cuts-display .display-cuts {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4649,6 +4642,13 @@ header nav ul li a.selected {
   height: auto;
   padding: 4em 0 14em;
   position: relative;
+  -webkit-transform: translateZ(1);
+          transform: translateZ(1);
+}
+@media all and (max-width: 1024px) {
+  .products .parrilla {
+    background-attachment: scroll !important;
+  }
 }
 .products .parrilla h3 {
   color: #b1841d;
@@ -4674,18 +4674,15 @@ header nav ul li a.selected {
   padding-left: 2em;
 }
 .contact article form {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -4706,19 +4703,23 @@ header nav ul li a.selected {
   background: rgba(177,132,29,0.15);
 }
 .contact article form select {
+  color: rgba(0,0,0,0.25);
   background: rgba(56,46,42,0.1);
   border: none;
   border-radius: 0;
+  display: none;
   font-family: "geared", sans-serif;
   font-size: 16px;
   height: 3em;
   margin: 0.5em 0;
   outline: none;
   padding: 1em;
-  -webkit-appearance: none;
 }
 .contact article form select.right {
   text-align: center;
+}
+.contact article form select.show {
+  display: block;
 }
 .contact article form select:focus {
   background: rgba(177,132,29,0.15);
@@ -4727,7 +4728,7 @@ header nav ul li a.selected {
   background: rgba(56,46,42,0.1);
   font-family: "geared", sans-serif;
   font-size: 16px;
-  height: 100px;
+  height: 200px;
   border: 0;
   margin: 0.5em 0;
   outline: none;
@@ -4746,8 +4747,7 @@ header nav ul li a.selected {
   padding: 1em 2em;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all 1s;
-          transition: all 1s;
+  transition: all 1s;
   width: 50%;
 }
 .contact article form .half-centered:hover {
@@ -4765,6 +4765,33 @@ header nav ul li a.selected {
 .contact article form .hundredtext {
   width: 100%;
 }
+.contact article form .add-selects {
+  border: 2px solid #008000;
+  border-radius: 50%;
+  color: #008000;
+  cursor: pointer;
+  font-size: 35px;
+  height: 35px;
+  margin: 0.25em 0;
+  opacity: 0.5;
+  padding: 0;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  width: 35px;
+}
+.contact article form .add-selects:hover {
+  opacity: 1;
+}
+.contact article form .add-selects p {
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -52.5%);
+      -ms-transform: translate(-50%, -52.5%);
+          transform: translate(-50%, -52.5%);
+}
 .cut-popup {
   background: rgba(56,46,42,0.9);
   bottom: 0;
@@ -4774,8 +4801,7 @@ header nav ul li a.selected {
   position: fixed;
   right: 0;
   top: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-          transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   z-index: 999;
 }
 .cut-popup.open {

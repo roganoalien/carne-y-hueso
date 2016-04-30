@@ -70,7 +70,7 @@
 			<article>
 				<!-- <div class="bg-filter"></div> -->
 				<ul class="slideshow-container">
-					<li style="background: url(build/img/slide-01-resize.jpg) no-repeat center center;"></li>
+					<li style="background: url(build/img/slide-01-resize.jpg) no-repeat center center;" id="parallax-one"></li>
 				</ul>
 				<div class="main-logo">
 					<img src="build/img/logo-dorado.png" alt="De Carne y Hueso Logo" class="home-logo">
@@ -108,12 +108,16 @@
 				<img src="build/img/parrilleros-texto.png" alt="Parrilleros" class="parrilleros-title">
 				<div class="the-owners">
 					<div class="owner">
-						<img src="build/img/foto-isaac.png" alt="Parrillero Isaac" class="isaac">
-						<img src="build/img/isaac-txt.png" alt="Isaac Parrillero" class="isaac-txt">
-					</div>
-					<div class="owner">
+						<!-- <img src="build/img/foto-isaac.png" alt="Parrillero Isaac" class="isaac">
+						<img src="build/img/isaac-txt.png" alt="Isaac Parrillero" class="isaac-txt"> -->
 						<img src="build/img/foto-gus.png" alt="Parrillero Gus" class="gus">
 						<img src="build/img/gus-txt.png" alt="Parrillero Gus" class="gus-txt">
+					</div>
+					<div class="owner">
+						<!-- <img src="build/img/foto-gus.png" alt="Parrillero Gus" class="gus">
+						<img src="build/img/gus-txt.png" alt="Parrillero Gus" class="gus-txt"> -->
+						<img src="build/img/foto-isaac.png" alt="Parrillero Isaac" class="isaac">
+						<img src="build/img/isaac-txt.png" alt="Isaac Parrillero" class="isaac-txt">
 					</div>
 				</div>
 				<img src="build/img/brush_down.png" alt="Separador Brocha" class="brush-down">
@@ -186,14 +190,14 @@
 					<input type="text" name="name" placeholder="Nombre" class="left">
 					<input type="email" name="email" class="right" placeholder="Email">
 					<input type="tel" name="tel" placeholder="Teléfono" class="hundred">
-					<select name="carne-uno" id="select-meat-one" class="first-to-select left">
+					<select name="carne-uno" id="select-meat-one" class="first-to-select left show">
 						<option value="none" class="default-select">Selecciona un Corte</option>
 						<option value="t-bone">T-Bone</option>
 						<option value="new-york">New York</option>
 						<option value="rib-eye">Rib Eye</option>
 						<option value="sirloin">Sirloin</option>
 					</select>
-					<select name="cantidad-uno" id="select-number-one" class="first-to-select right">
+					<select name="cantidad-uno" id="select-number-one" class="first-to-select right show">
 						<option value="none" class="default-select">Selecciona la cantidad que quieres</option>
 						<option value="1">0</option>
 						<option value="1">1</option>
@@ -261,6 +265,7 @@
 						<option value="9">9</option>
 						<option value="10">10</option>
 					</select>
+					<div class="add-selects"><p>+</p></div>
 					<input type="text" name="place" placeholder="Lugar de entrega" class="hundred">
 					<textarea name="pedido" placeholder="¿En qué podemos servirte?" class="hundredtext"></textarea>
 					<input type="submit" value="Enviar" class="half-centered">
@@ -278,8 +283,11 @@
 		</footer>
 	</div>
 	<script src="js/libs/jquery-2.2.2.min.js"></script>
+	<script src="js/libs/TweenMax.min.js"></script>
+	<script src="js/libs/ScrollMagic.js"></script>
+	<script src="js/libs/animation.gsap.js"></script>
+	<script src="js/libs/debug.addIndicators.js"></script>
 	<script src="js/carne.js"></script>
-	<!-- <script src="js/libs/parallax.js"></script> -->
 	<script src="js/libs/perfect-scrollbar.js"></script>
 	<script type="text/javascript">
 		Ps.initialize(document.getElementById('container'), {
@@ -291,7 +299,10 @@
 		// $(window).resize(function(){
 		// 	Ps.update(document.getElementById('container'));
 		// });
-		$(document).ready(function(){CARNE.init()});
+		$(document).ready(function(){
+			CARNE.init();
+			CARNE.contact.init();
+		});
 	</script>
 </body>
 </html>
