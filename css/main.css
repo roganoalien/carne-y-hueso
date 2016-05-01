@@ -4888,10 +4888,15 @@ header nav ul li a.selected {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.cut-popup .popup-container .info {
+.cut-popup .popup-container .info .meat-container {
   display: none;
 }
 .cut-popup .popup-container .info h4 {
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 30px;
   height: 80px;
   line-height: 90px;
@@ -4905,6 +4910,14 @@ header nav ul li a.selected {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   height: 82%;
   left: 0;
   margin-top: 80px;
@@ -4914,9 +4927,20 @@ header nav ul li a.selected {
   top: 0;
   width: 100%;
 }
+.cut-popup .popup-container .info .content .meat-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .cut-popup .popup-container .info .content .left {
-  height: 100%;
-  width: 50%;
+  height: auto;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 100%;
 }
 .cut-popup .popup-container .info .content .left ul {
   -webkit-box-align: center;
@@ -4938,9 +4962,10 @@ header nav ul li a.selected {
   width: 100%;
 }
 .cut-popup .popup-container .info .content .left ul li {
-  margin: 1px 2px;
+  margin: 1px 0;
   overflow: hidden;
-  width: 49%;
+  padding: 0 2px;
+  width: 25%;
 }
 .cut-popup .popup-container .info .content .left ul li img {
   height: auto;
@@ -4957,28 +4982,44 @@ header nav ul li a.selected {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
+  height: auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2em;
-  width: 50%;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 6em 2em 4em;
+  width: 100%;
 }
 .cut-popup .popup-container .info .content .right p {
   text-align: justify;
 }
 .cut-popup .popup-container.t-bone .t-bone {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .cut-popup .popup-container.new-york .new-york {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .cut-popup .popup-container.rib-eye .rib-eye {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .cut-popup .popup-container.sirloin .sirloin {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .cut-popup .popup-container .header {
   -webkit-box-align: center;

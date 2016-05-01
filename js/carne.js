@@ -212,6 +212,7 @@ CARNE.contact = (function(){
 			if(_contador == 3){
 				console.log("cuatro");
 				_$selectCuatro.addClass('show');
+				_$addSelects.hide();
 			}
 		}
 	};
