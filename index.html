@@ -36,17 +36,105 @@
 	</div>
 	<div class="cut-popup">
 		<div class="popup-container">
-			<div class="t-bone">
+			<div class="header">
+				<img src="build/img/logo-menu.png" alt="De Carne y Hueso Logo Horizontal" class="logo-horizontal-img">
+				<p class="close-popup">X</p>
+			</div>
+			<div class="t-bone info">
 				<h4>T-Bone</h4>
+				<div class="content">
+					<div class="left">
+						<ul>
+							<li>
+								<img src="build/img/ribeye.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/tbone.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/sirloin.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/newyork.jpg" alt="Rib">
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<p>Corte atractivo a la vista con hueso en forma de T que se obtiene de la parte posterior del lomo de res, posee marmoleo ligero con delicioso sabor y una excelente textura.</p>
+					</div>
+				</div>
 			</div>
-			<div class="new-york">
+			<div class="new-york info">
 				<h4>New York</h4>
+				<div class="content">
+					<div class="left">
+						<ul>
+							<li>
+								<img src="build/img/ribeye.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/tbone.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/sirloin.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/newyork.jpg" alt="Rib">
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<p>Corte sin hueso que proviene de la parte media del lomo excluyendo el hueso y de un músculo que no trabaja mucho, por ello su particularidad principal es ser carne tierna. Se caracteriza por tener una excelente combinación de textura firme y buen marmoleo que ofrece una suavidad y sabor excepcionales.</p>
+					</div>
+				</div>
 			</div>
-			<div class="rib-eye">
+			<div class="rib-eye info">
 				<h4>Rib Eye</h4>
+				<div class="content">
+					<div class="left">
+						<ul>
+							<li>
+								<img src="build/img/ribeye.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/tbone.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/sirloin.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/newyork.jpg" alt="Rib">
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<p>Este corte de carne no tiene hueso y se obtiene del centro del costillar, posee una gran cantidad de marmoleo adherido al músculo que lo hace especialmente tierno y de gran sabor. Sin cartílago ni tejido conectivo, contiene la grasa natural.</p>
+					</div>
+				</div>
 			</div>
-			<div class="sirloin">
+			<div class="sirloin info">
 				<h4>Sirloin</h4>
+				<div class="content">
+					<div class="left">
+						<ul>
+							<li>
+								<img src="build/img/ribeye.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/tbone.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/sirloin.jpg" alt="Rib">
+							</li>
+							<li>
+								<img src="build/img/newyork.jpg" alt="Rib">
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<p>Este corte se obtiene de la parte superior del lomo, considerado un corte magro (limpio, sin grasa y sin nervios) por su poca cantidad de marmoleo y sin hueso. Se caracteriza por su sabor suave combinado con una textura firme lo que permite que sea una excelente opción para marinados, especias y cubiertas para intensificar su sabor.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -59,8 +147,8 @@
 				</div>
 				<ul>
 					<li><a href="#inicio">inicio</a></li>
-					<li><a href="#nosotros">nosotros</a></li>
-					<li><a href="#cortes">cortes</a></li>
+					<li><a href="#nosotros" class="nosotros-nav">nosotros</a></li>
+					<li><a href="#cortes" class="cortes-nav">cortes</a></li>
 					<li><a href="#parrilla">parrilla</a></li>
 					<li><a href="#contacto">contacto</a></li>
 				</ul>
@@ -81,7 +169,10 @@
 		<section class="us section-pos" id="nosotros">
 			<article class="us-info">
 				<img src="build/img/mano.png" alt="Señalador" class="pointer">
-				<h2>Nosotros</h2>
+				<div class="title-holder">
+					<h2>Nosotros</h2>
+					<img src="build/img/txt-nosotros.png" alt="Nosotros-title" class="us-h2">
+				</div>
 				<p>
 					De carne y hueso nace por la pasión parrillera que han compartido 2 colegas que durante años cualquier pretexto ha sido bueno para prender el carbón, preparar la parrilla y disfrutar unos buenos cortes.
 				</p>
@@ -125,7 +216,10 @@
 		</section>
 		<section class="products section-pos" id="cortes">
 			<article class="american-cuts">
-				<h2>Cortes Americanos</h2>
+				<div class="title-holder">
+					<h2>Cortes Americanos</h2>
+					<img src="build/img/txt-cortes.png" alt="Cortes Americanos title" class="cortes-h2">
+				</div>
 				<p>
 					Cortes americanos de res con certificado TIF de calidad Suprema traídos del norte del país al estado de Puebla.
 				</p>
@@ -166,7 +260,10 @@
 			<article class="parrilla section-pos" id="parrilla">
 				<img src="build/img/brush_up-2.png" alt="Separador Brocha arriba" class="brush-up">
 				<img src="build/img/brush_down.png" alt="Separador Brocha arriba" class="brush-down">
-				<h3>Parrilla Movil</h3>
+				<div class="title-holder">
+					<h3>Parrilla Movil</h3>
+					<img src="build/img/txt-parrillam.png" alt="Parrilla Móvil Title" class="parrilla-h2">
+				</div>
 				<p>
 					Llevamos a tu hogar la experiencia de compartir un momento único con tus amigos o familiares, disfrutando de una buena parrilla con carne de la más alta calidad y el toque especial de nuestras deliciosas salsas y exquisitos complementos, sin tener que preocuparte por nada y a un precio muy accesible.
 				</p>
@@ -183,9 +280,10 @@
 		</section>
 		<section class="contact section-pos" id="contacto">
 			<article>
-				<h2>
-					Contacto
-				</h2>
+				<div class="title-holder">
+					<h2>Contacto</h2>
+					<img src="build/img/txt-contacto.png" alt="Contacto title" class="contacto-h2">
+				</div>
 				<form action="">
 					<input type="text" name="name" placeholder="Nombre" class="left">
 					<input type="email" name="email" class="right" placeholder="Email">
@@ -218,6 +316,7 @@
 						<option value="sirloin">Sirloin</option>
 					</select>
 					<select name="cantidad-dos" id="select-number-two" class="second-to-select right">
+						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -236,6 +335,7 @@
 						<option value="sirloin">Sirloin</option>
 					</select>
 					<select name="cantidad-tres" id="select-number-three" class="third-to-select right">
+						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -254,6 +354,7 @@
 						<option value="sirloin">Sirloin</option>
 					</select>
 					<select name="cantidad-cuatro" id="select-number-four" class="four-to-select right">
+						<option value="0">0</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -268,7 +369,7 @@
 					<div class="add-selects"><p>+</p></div>
 					<input type="text" name="place" placeholder="Lugar de entrega" class="hundred">
 					<textarea name="pedido" placeholder="¿En qué podemos servirte?" class="hundredtext"></textarea>
-					<input type="submit" value="Enviar" class="half-centered">
+					<input type="submit" value="Enviar" class="half-centered send-form">
 				</form>
 			</article>
 		</section>

@@ -32,18 +32,29 @@ CARNE.loader = (function(){
 })();
 CARNE.cortes = (function(){
 	var _$cortes_li,
+		_$close_popup,
 		_$popup,
 		_$pop_container;
 	var _cortesVars = function _cortesVars(){
 		_$cortes_li = $('.display-cuts li');
 		_$popup = $('.cut-popup');
 		_$pop_container = $('.popup-container');
+		_$close_popup = $('.close-popup');
 	};
 	var _cortesEvents = function _cortesEvents(){
 		_$cortes_li.on('click', function(){
-			_$pop_container.removeClass();
+			var _meat = $(this).data('corte');
+			_$pop_container.removeClass().addClass('popup-container');
 			_$popup.addClass('open');
-			_$pop_container.addClass('popup-container ' + $(this).data('corte'));
+			setTimeout(function(){
+				_$pop_container.addClass('showing ' + _meat);
+			}, 500);
+		});
+		_$close_popup.on('click', function(){
+			_$pop_container.removeClass('showing');
+			setTimeout(function(){
+				_$popup.removeClass('open');
+			}, 500);
 		});
 	};
 	return{
@@ -73,11 +84,19 @@ CARNE.nav = (function(){
 				_currentPos = _$bodyContainer.scrollTop();
 				_id = $(this).attr('href');
 				_goto = $(_id).offset().top;
-				_$bodyContainer.animate({
-					scrollTop: _goto + _currentPos - 80
-				}, 500, function(){
-					_onScroll = false;
-				});
+				if(_id == "#cortes"){
+					_$bodyContainer.animate({
+						scrollTop: _goto + _currentPos - 140
+					}, 500, function(){
+						_onScroll = false;
+					});
+				} else {
+					_$bodyContainer.animate({
+						scrollTop: _goto + _currentPos - 80
+					}, 500, function(){
+						_onScroll = false;
+					});
+				}
 				Ps.update(document.getElementById('container'));
 			}
 		});
@@ -155,13 +174,16 @@ CARNE.contact = (function(){
 		_contador,
 		_$selectDos,
 		_$selectTres,
+		_firstSelect = false,
 		_adding,
-		_$selectCuatro;
+		_$selectCuatro,
+		_$sendForm;
 	var _slideVars = function _slideVars(){
 		_$addSelects = $('.add-selects');
 		_$selectDos = $('.second-to-select');
 		_$selectTres = $('.third-to-select');
 		_$selectCuatro = $('.four-to-select');
+		_$sendForm = $('.send-form');
 		_contador = 0;
 		_adding = false;
 	};
@@ -193,30 +215,55 @@ CARNE.contact = (function(){
 			}
 		}
 	};
+	var _formSelect = function _formSelect(){
+		$('select').on("click", function(){
+			if(!_firstSelect){
+				$('select').css('color', 'black');
+				_firstSelect = true;
+			}
+		});
+	};
+	var _formValidator = function _formValidator(){
+		_$sendForm.on('click', function(event){
+			event.preventDefault();
+		});
+	};
 	return{
 		init : function init(){
 			_slideVars();
 			_slideEvents();
+			_formSelect();
+			_formValidator();
 		}
 	}
 })();
 CARNE.scrollMagic = (function() {
-	var _$parallax1,
-		_$parallax2,
-		_$parallax3;
+	var _heightNosotros,
+		_heightCortes,
+		_heightParrilla,
+		_heightContacto;
 	var _magicVars = function _magicVars(){
 		//variables del ScrollMagic
-		_$parallax1 = $('#parallax-one');
-		_$parallax2 = $('.us-owners');
-		_$parallax3 = $('#parrilla');
+		_heightNosotros = $('#nosotros').height();
+		_heightCortes = $('.american-cuts').height();
 	};
 	var _magicEvents = function _magicEvents(){
-		var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+		// var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+		// new ScrollMagic.Scene({triggerElement: "#nosotros"})
+		// 					.setTween(_$parallax1, {y: "80%", ease: Linear.easeNone})
+		// 					.addIndicators()
+		// 					.addTo(controller);
+		var controller1 = new ScrollMagic.Controller({globalSceneOptions: {duration: _heightNosotros}});
+		//NOSOTROS
 		new ScrollMagic.Scene({triggerElement: "#nosotros"})
-							.setTween(_$parallax1, {y: "80%", ease: Linear.easeNone})
-							.addIndicators()
-							.addTo(controller);
-		var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+							.setClassToggle(".nosotros-nav", "selected") // add class toggle
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller1);
+		var controller2 = new ScrollMagic.Controller({globalSceneOptions: {duration: _heightCortes}});
+		new ScrollMagic.Scene({triggerElement: "#cortes"})
+							.setClassToggle(".cortes-nav", "selected") // add class toggle
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller2);
 	};
 	return{
 		init : function init(){
