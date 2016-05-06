@@ -1,0 +1,37 @@
+<h1 id="carne-y-hueso">carne-y-hueso</h1>
+<p>Sitio de carne y hueso hecho con grav CMS que es gratuito para utilizar</p>
+<h1 id="carpeta-assets">Carpeta ASSETS</h1>
+<p>Todo lo que está aquí adentro es antes de que se procese todo para que funcione en producción (minify, uglify, etc)</p>
+<h1 id="cosas-a-configurar-que-faltan">Cosas a configurar que faltan</h1>
+<p>.htaccess para remover las terminaciones de html y configuración de gulp</p>
+<h1 id="gulp">GULP</h1>
+<p>-JS uglify
+-CSS minify
+-IMG minify</p>
+<h1 id="seo">SEO</h1>
+<p>Agregar el meta description, metas de redes sociales y demás. SITEMAP</p>
+<h1 id="funciones-extras">Funciones extras</h1>
+<p>-Agregar Loader     $(image).load(function() { // ...}); para detectar cuando las imágenes grandes terminan de cargar
+-Agregar el onscreen add Class para que cuando los objetos estén en el viewport aparezcan con un fade o slide sencillo 
+-Agregar la animación de inicio del logo
+//Parece que este es el plugin de in viewport
+// Plugin @RokoCB :: Return the visible amount of px
+// of any element currently in viewport.
+// stackoverflow.com/questions/24768795/
+;(function($, win) {
+  $.fn.inViewport = function(cb) {
+     return this.each(function(i,el){
+       function visPx(){
+         var H = $(this).height(),
+             r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+         return cb.call(el, Math.max(0, t&gt;0? H-t : (b&lt;H?b:H)));<br>       } visPx();
+       $(win).on(&quot;resize scroll&quot;, visPx);
+     });
+  };
+}(jQuery, window));</p>
+<p>$(&quot;.box&quot;).inViewport(function(px){
+    if(px) $(this).addClass(&quot;triggeredCSS3&quot;) ;
+});</p>
+<h1 id="responsive-men-">Responsive Menú</h1>
+<p>Sliding from right on top from everything
+<a href="https://www.youtube.com/watch?v=1lmFMsrLgwM">https://www.youtube.com/watch?v=1lmFMsrLgwM</a></p>
