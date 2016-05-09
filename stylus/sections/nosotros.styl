@@ -1,12 +1,16 @@
 .us {
 	padding 4em 0
 	height auto
+	overflow-x hidden
 	width 100%
 	article{
 		position relative
 		h2{
 			color $color-cafe
 			margin 0 0 1em
+		}
+		p {
+
 		}
 		.pointer{
 			height auto
@@ -19,33 +23,62 @@
 		.floating-knife{
 			height auto
 			left 0
+			pointer-events none
 			position absolute
 			top 50%
 			transform translateY(-50%)
 			width 400px
+			@media $lg{
+				width 300px
+			}
+			@media $medium-lg{
+				width 200px
+			}
+			@media $medium-xs{
+				width 0
+			}
 		}
 		.floating-table{
 			height auto
 			right 0
+			pointer-events none
 			position absolute
 			top 50%
 			transform translateY(-50%)
 			width 400px
+			@media $lg{
+				width 300px
+			}
+			@media $medium-lg{
+				width 200px
+			}
+			@media $medium-xs{
+				width 0
+			}
 		}
 	}
 	.us-info{
 		padding-top 1em
+		@media $medium-xs{
+			padding-bottom 2em
+		}
 	}
 	.us-owners{
 		background url('../build/img/parrilleros-fondo-resize.jpg') no-repeat center center
 		background-attachment fixed
 		background-size cover
-		height 1400px
-		padding-top 300px
+		height auto
+		padding 300px 0
 		position relative
 		transform translateZ(1)
-		@media all and (max-width: 1024px){
+		@media $medium-lg{
 			background-attachment scroll !important
+		}
+		@media $medium-xs{
+			padding 200px 0 150px
+		}
+		@media $xxs{
+			padding 150px 0 150px
 		}
 		.parrilleros-title{
 			height auto
@@ -54,6 +87,16 @@
 			top 13em
 			transform translate(-50%, 0)
 			width 550px
+			@media $medium-xs{
+				top 8em
+			}
+			@media $xs{
+				top 6em
+				width 450px
+			}
+			@media $xxs{
+				width 250px
+			}
 		}
 		.the-owners{
 			align-items center
@@ -61,6 +104,12 @@
 			justify-content space-between
 			margin 0 auto
 			width 70%
+			@media $medium-xs{
+				width 90%
+			}
+			@media $xxs{
+				flex-direction column
+			}
 			.owner{
 				align-items center
 				display flex
@@ -68,19 +117,18 @@
 				justify-content space-around
 				height auto
 				width 40%
+				@media $xxs{
+					width 60%
+					&:last-child{
+						margin-top 1em
+					}
+				}
 				.isaac, .gus{
-					height 702px
-					width auto
-				}
-				.isaac-txt{
 					height auto
-					margin -50px auto 0
-					width 400px
-				}
-				.gus-txt{
-					height auto
-					margin -50px auto 0
-					width 455px
+					width 300px
+					@media $medium-xs{
+						width 100%
+					}
 				}
 			}
 		}

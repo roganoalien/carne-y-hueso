@@ -21,9 +21,15 @@
 		top 40%
 		transform translate(-50%, -50%)
 		z-index 3
+		@media $medium-lg{
+			top 50%
+		}
 		.home-logo{
 			height auto
 			width 300px
+			@media $medium-xs{
+				width 200px
+			}
 		}
 	}
 	.slideshow-container{
@@ -42,7 +48,7 @@
 			top 0
 			width 100%
 			transform translateZ(1)
-			@media all and (max-width: 1024px){
+			@media $medium-lg{
 				background-attachment scroll !important
 			}
 		}

@@ -70,11 +70,17 @@ CARNE.nav = (function(){
 		_currentPos,
 		_id,
 		_goto,
+		_$r_nav,
+		_$menuOpener,
+		_$menuCloser,
 		_$body_container;
 	var _navVars = function _navVars(){
 		_$header_item = $('header a');
 		_$bodyContainer = $('.body-container');
 		_onScroll = false;
+		_$menuOpener = $('nav svg');
+		_$menuCloser = $('.close-r-menu');
+		_$r_nav = $('.r-nav');
 	};
 	var _navEvents = function _navEvents(){
 		_$header_item.on('click', function(event){
@@ -99,6 +105,22 @@ CARNE.nav = (function(){
 				}
 				Ps.update(document.getElementById('container'));
 			}
+		});;
+		_$menuOpener.on('click', function(){
+			//open menu
+			_$bodyContainer.addClass('no-scroll');
+			_$r_nav.addClass('active');
+			setTimeout(function(){
+				_$r_nav.find('.container').addClass('active');
+			}, 500);
+		})
+		_$menuCloser.on('click', function(){
+			// alert();
+			_$r_nav.find('.container').removeClass('active');
+			setTimeout(function(){
+				_$r_nav.removeClass('active');
+				_$bodyContainer.removeClass('no-scroll');
+			}, 500);
 		});
 	};
 	return{

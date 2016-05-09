@@ -10,12 +10,20 @@ body {
 	font-size 18px
 	height 100vh
 	overflow-x hidden
-	width 100%
+	width 100vw
 	.body-container{
 		height 100vh
-		overflow auto
+		// overflow auto
+		overflow hidden
 		position relative
 		width 100%
+		@media $xxs{
+			width 100vw
+			overflow-x hidden !important
+		}
+		&.no-scroll{
+			overflow hidden
+		}
 		h2{
 			color $color-cafe
 			// display none
@@ -30,6 +38,13 @@ body {
 			margin 1em auto
 			text-align center
 			width 40%
+			@media $medium-xs{
+				width 70%
+			}
+			@media $xs{
+				text-align justify
+				width 80%
+			}
 		}
 		.brush-down{
 			bottom 0
@@ -64,18 +79,42 @@ body {
 			.contacto-h2{
 				top -20px
 				width 450px
+				@media $xs{
+					width 420px
+				}
+				@media $xxs{
+					width 380px
+				}
 			}
 			.cortes-h2{
 				top -60px
 				width 450px
+				@media $xs{
+					width 350px
+				}
+				@media $xxs{
+					width 300px
+				}
 			}
 			.parrilla-h2{
 				top -10px
 				width 450px
+				@media $xs{
+					width 400px
+				}
+				@media $xxs{
+					width 300px
+				}
 			}
 			.us-h2{
 				top -20px
 				width 450px
+				@media $xs{
+					width 350px
+				}
+				@media $xxs{
+					width 300px
+				}
 			}
 		}
 		.left
@@ -91,32 +130,50 @@ body {
 			color $color-cafe
 			display flex
 			justify-content center
-			padding 2em
+			padding 0 0 2em
 			width 100%
+			@media $medium-xs{
+				flex-wrap wrap
+				padding 0 0 1em
+			}
 			img{
 				height auto
 				width 70px
+				@media $medium-xs{
+					margin 0 auto
+					width 80%
+				}
 			}
 			a{
 				margin-right 1em
 				&:last-child{
 					margin-right 0
 				}
+				@media $medium-xs{
+					margin-right 0
+					text-align center
+				}
 			}
 			.footer-contact{
 				width 230px
+				@media $medium-xs{
+					width 100%
+				}
 				p{
 					margin 0
 					padding 0
 					text-align left
 					width 100%
+					@media $medium-xs{
+						text-align center
+					}
 					.golden{
 						color $color-dorado
 					}
 				}
 			}
 			.rights{
-				margin 0
+				margin 1em 0 0
 				width auto
 			}
 		}
