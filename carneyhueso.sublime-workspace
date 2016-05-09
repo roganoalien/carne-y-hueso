@@ -231,16 +231,24 @@
 			"file": "js/carne.js",
 			"settings":
 			{
-				"buffer_size": 3807,
+				"buffer_size": 6903,
 				"line_ending": "Unix",
 				"name": "carne.js"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1486,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 13601,
+				"buffer_size": 18526,
 				"line_ending": "Unix",
 				"name": "index.html"
 			}
@@ -316,7 +324,8 @@
 	"expanded_folders":
 	[
 		"/git_repositorios/experiments/carne-y-hueso",
-		"/git_repositorios/experiments/carne-y-hueso/stylus",
+		"/git_repositorios/experiments/carne-y-hueso/build/img",
+		"/git_repositorios/experiments/carne-y-hueso/js",
 		"/git_repositorios/experiments/carne-y-hueso/stylus/sections"
 	],
 	"file_history":
@@ -465,6 +474,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"parrilla móvil",
 			"-100",
 			"los parrilleros",
 			"border-",
@@ -591,8 +601,7 @@
 			"_stepOne_2",
 			"_stepOne",
 			"_stepThree()",
-			"_stepTwo()",
-			"_stepOne"
+			"_stepTwo()"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -620,7 +629,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3807,
+						"buffer_size": 6903,
 						"regions":
 						{
 						},
@@ -639,7 +648,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5201.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -647,19 +656,47 @@
 				},
 				{
 					"buffer": 1,
-					"file": "index.html",
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13601,
+						"buffer_size": 1486,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9606,
-								9606
+								1486,
+								1486
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2996,
+								2996
 							]
 						],
 						"settings":
@@ -670,10 +707,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1657.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -760,7 +797,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 238.0,
+	"side_bar_width": 343.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
