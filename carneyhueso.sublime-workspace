@@ -231,7 +231,7 @@
 			"file": "js/carne.js",
 			"settings":
 			{
-				"buffer_size": 6903,
+				"buffer_size": 7493,
 				"line_ending": "Unix",
 				"name": "carne.js"
 			}
@@ -248,9 +248,18 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 18526,
+				"buffer_size": 19675,
 				"line_ending": "Unix",
 				"name": "index.html"
+			}
+		},
+		{
+			"file": "process.php",
+			"settings":
+			{
+				"buffer_size": 655,
+				"line_ending": "Unix",
+				"name": "process.php"
 			}
 		}
 	],
@@ -323,10 +332,7 @@
 	},
 	"expanded_folders":
 	[
-		"/git_repositorios/experiments/carne-y-hueso",
-		"/git_repositorios/experiments/carne-y-hueso/build/img",
-		"/git_repositorios/experiments/carne-y-hueso/js",
-		"/git_repositorios/experiments/carne-y-hueso/stylus/sections"
+		"/git_repositorios/experiments/carne-y-hueso"
 	],
 	"file_history":
 	[
@@ -620,7 +626,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -629,7 +635,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6903,
+						"buffer_size": 7493,
 						"regions":
 						{
 						},
@@ -651,7 +657,7 @@
 						"translation.y": 5201.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -667,19 +673,22 @@
 						"selection":
 						[
 							[
-								1486,
-								1486
+								1276,
+								1276
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -688,15 +697,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18526,
+						"buffer_size": 19675,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2996,
-								2996
+								14144,
+								14144
 							]
 						],
 						"settings":
@@ -707,10 +716,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1657.0,
+						"translation.y": 9279.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "process.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								652,
+								652
+							]
+						],
+						"settings":
+						{
+							"auto_name": "process.php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

@@ -295,3 +295,54 @@ CARNE.scrollMagic = (function() {
 		}
 	}
 })();
+CARNE.formSend = (function() {
+	var _processForm = function _processForm(){
+		$('form').submit(function(event)){
+			//get form data
+			//there are many ways to get this data using jQuery (you can use the class or id also)
+			//CAMBIAR PARA CAPTURAR LOS DATOS CORRESPONDIENTES
+			var formData = {
+				'name'	: $('input[name=name').val(),
+				'email'	: $('input[name=email').val(),
+				'tel'	: $('input[name=tel').val(),
+				'meat1'	: $('select[name=carne-uno').val(),
+				'qty1'	: $('select[name=cantidad-uno').val(),
+				'meat2'	: $('select[name=carne-dos').val(),
+				'qty2'	: $('select[name=cantidad-dos').val(),
+				'meat3'	: $('select[name=carne-tres').val(),
+				'qty3'	: $('select[name=cantidad-tres').val(),
+				'meat4'	: $('select[name=carne-cuatro').val(),
+				'qty4'	: $('select[name=cantidad-cuatro').val(),
+				'place'	: $('input[name=place').val(),
+				'text'	: $('input[name=pedido').val()
+			};
+			//process the form
+			$.ajax({
+				type 		: 	'POST', //define the type of HTTP verb we want to use (POST for our form)
+				url 		: 	'process.php', //the url where we want to POST
+				data 		: 	formData, //our data object
+				dataType 	: 	'json', //what type of data do we expect back from the server
+				encode 		: 	true
+			})
+			//using the done promise callback
+			.done(function(data){
+				//log data to the console so we can see
+				console.log(data);
+				//here we will handle errors and validation messages
+				if(!data.success){
+					//handle errors for name
+					if(data.errors.name){
+						$('');
+					}
+				}
+			});
+			//stop the form from submitting the normal way and refreshing the page
+			event.preventDefault();
+		}
+	};
+	return{
+		init : function init(){
+			_processForm();
+		}
+	}
+})();
