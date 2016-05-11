@@ -162,12 +162,12 @@
 				<div class="container">
 					<img src="build/img/logo-dorado.png" alt="De Carne y Hueso Logo" class="home-logo">
 					<ul>
-						<li><a href="#inicio">inicio</a></li>
-						<li><a href="#nosotros" class="nosotros-nav">nosotros</a></li>
-						<li><a href="#cortes" class="cortes-nav">cortes</a></li>
-						<li><a href="#parrilla">parrilla</a></li>
-						<li><a href="#contacto">contacto</a></li>
-						<li class="close-r-menu">cerrar</li>
+						<li><a href="#inicio" data-check="movil">inicio</a></li>
+						<li><a href="#nosotros" class="nosotros-nav" data-check="movil">nosotros</a></li>
+						<li><a href="#cortes" class="cortes-nav" data-check="movil">cortes</a></li>
+						<li><a href="#parrilla" data-check="movil">parrilla</a></li>
+						<li><a href="#contacto" data-check="movil">contacto</a></li>
+						<li class="close-r-menu" data-check="movil">cerrar</li>
 					</ul>
 				</div>
 			</div>
@@ -326,7 +326,7 @@
 					<h2>Contacto</h2>
 					<img src="build/img/txt-contacto.png" alt="Contacto title" class="contacto-h2">
 				</div>
-				<form action="process.php" method="POST">
+				<form id="contact" name="contact" method="POST">
 					<input type="text" name="name" placeholder="Nombre" class="left">
 					<input type="email" name="email" class="right" placeholder="Email">
 					<input type="tel" name="tel" placeholder="Teléfono" class="hundred">

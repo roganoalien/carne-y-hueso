@@ -85,25 +85,18 @@ CARNE.nav = (function(){
 	var _navEvents = function _navEvents(){
 		_$header_item.on('click', function(event){
 			event.preventDefault();
-			if(!_onScroll){
-				_onScroll = true;
-				_currentPos = _$bodyContainer.scrollTop();
-				_id = $(this).attr('href');
-				_goto = $(_id).offset().top;
-				if(_id == "#cortes"){
-					_$bodyContainer.animate({
-						scrollTop: _goto + _currentPos - 140
-					}, 500, function(){
-						_onScroll = false;
-					});
-				} else {
-					_$bodyContainer.animate({
-						scrollTop: _goto + _currentPos - 80
-					}, 500, function(){
-						_onScroll = false;
-					});
+			_id = $(this).attr('href');
+			if(!$(this).attr('data-check')){
+				if(!_onScroll){
+					_animateScroll(_id);
 				}
-				Ps.update(document.getElementById('container'));
+			} else{
+				if(!_onScroll){
+					_closingMenu();
+					setTimeout(function(){
+						_animateScroll(_id)
+					}, 1000);
+				}
 			}
 		});;
 		_$menuOpener.on('click', function(){
@@ -115,13 +108,34 @@ CARNE.nav = (function(){
 			}, 500);
 		})
 		_$menuCloser.on('click', function(){
-			// alert();
-			_$r_nav.find('.container').removeClass('active');
-			setTimeout(function(){
-				_$r_nav.removeClass('active');
-				_$bodyContainer.removeClass('no-scroll');
-			}, 500);
+			_closingMenu();
 		});
+	};
+	var _closingMenu = function _closingMenu(){
+		_$r_nav.find('.container').removeClass('active');
+		setTimeout(function(){
+			_$r_nav.removeClass('active');
+			_$bodyContainer.removeClass('no-scroll');
+		}, 500);
+	};
+	var _animateScroll = function _animateScroll(_id){
+		_onScroll = true;
+		_currentPos = _$bodyContainer.scrollTop();
+		_goto = $(_id).offset().top;
+		if(_id == "#cortes"){
+			_$bodyContainer.animate({
+				scrollTop: _goto + _currentPos - 140
+			}, 500, function(){
+				_onScroll = false;
+			});
+		} else {
+			_$bodyContainer.animate({
+				scrollTop: _goto + _currentPos - 80
+			}, 500, function(){
+				_onScroll = false;
+			});
+		}
+		Ps.update(document.getElementById('container'));
 	};
 	return{
 		init : function init(){
@@ -297,48 +311,64 @@ CARNE.scrollMagic = (function() {
 })();
 CARNE.formSend = (function() {
 	var _processForm = function _processForm(){
-		$('form').submit(function(event)){
-			//get form data
-			//there are many ways to get this data using jQuery (you can use the class or id also)
-			//CAMBIAR PARA CAPTURAR LOS DATOS CORRESPONDIENTES
-			var formData = {
-				'name'	: $('input[name=name').val(),
-				'email'	: $('input[name=email').val(),
-				'tel'	: $('input[name=tel').val(),
-				'meat1'	: $('select[name=carne-uno').val(),
-				'qty1'	: $('select[name=cantidad-uno').val(),
-				'meat2'	: $('select[name=carne-dos').val(),
-				'qty2'	: $('select[name=cantidad-dos').val(),
-				'meat3'	: $('select[name=carne-tres').val(),
-				'qty3'	: $('select[name=cantidad-tres').val(),
-				'meat4'	: $('select[name=carne-cuatro').val(),
-				'qty4'	: $('select[name=cantidad-cuatro').val(),
-				'place'	: $('input[name=place').val(),
-				'text'	: $('input[name=pedido').val()
-			};
-			//process the form
-			$.ajax({
-				type 		: 	'POST', //define the type of HTTP verb we want to use (POST for our form)
-				url 		: 	'process.php', //the url where we want to POST
-				data 		: 	formData, //our data object
-				dataType 	: 	'json', //what type of data do we expect back from the server
-				encode 		: 	true
-			})
-			//using the done promise callback
-			.done(function(data){
-				//log data to the console so we can see
-				console.log(data);
-				//here we will handle errors and validation messages
-				if(!data.success){
-					//handle errors for name
-					if(data.errors.name){
-						$('');
-					}
+		jQuery.validator.addMethod('answercheck', function (value, element) {
+		        return this.optional(element) || /^\bcat\b$/.test(value);
+		    }, "type the correct answer -_-");
+		$('#contact').validate({
+			rules: {
+				name: {
+					required: true,
+					minlength: 4
+				},
+				email:{
+					required: true,
+					email: true
+				},
+				message:{
+					required: true,
+					minlength: 6
+				},
+				answer:{
+					required: true,
+					answercheck: true
 				}
-			});
-			//stop the form from submitting the normal way and refreshing the page
-			event.preventDefault();
-		}
+			},
+			messages: {
+				name:{
+					required: "Necesitamos tu nombre para poder ubicarte",
+					minlength: "Tu nombre debe de tener más de 4 letras"
+				},
+				email:{
+					required: "Para poder responderte y tenerte en nuestra base de datos ocupamos tu correo"
+				},
+				message:{
+					required: "Por favor escribe las especificaciones de tu entrega, indicaciones, comentarios o sugerencias",
+					minlength: "Ocupa tener más letras para poder entenderte de forma correcta"
+				},
+				answer:{
+					required: "sorry, wrong answer!"
+				}
+			},
+			submitHandler: function(form){
+				$(form).ajaxSubmit({
+					type:"POST",
+					data:$(form).serialize(),
+					url:"process.php",
+					success: function(){
+						$('#contact :input').attr('disabled', 'disabled');
+						$('#contact').fadeTo("slow", 0.15, function(){
+							$(this).find(':input').attr('disabled', 'disabled');
+							$('#success').fadeIn();
+						});
+					},
+					error: function(){
+						$('#contact').fadeTo("slow", 0.15, function(){
+							$('#error').fadeIn();
+						});
+					}
+				});
+			}
+		});
 	};
 	return{
 		init : function init(){
