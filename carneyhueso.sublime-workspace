@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"min",
+				"minlength"
+			],
+			[
 				"_perfe",
 				"_perfectVars"
 			],
@@ -231,26 +235,26 @@
 			"file": "js/carne.js",
 			"settings":
 			{
-				"buffer_size": 9208,
+				"buffer_size": 7990,
 				"line_ending": "Unix",
 				"name": "carne.js"
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 1486,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "process.php",
 			"settings":
 			{
-				"buffer_size": 1179,
+				"buffer_size": 570,
 				"line_ending": "Unix",
 				"name": "process.php"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 19821,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -324,11 +328,12 @@
 	"expanded_folders":
 	[
 		"/git_repositorios/experiments/carne-y-hueso",
-		"/git_repositorios/experiments/carne-y-hueso/img",
 		"/git_repositorios/experiments/carne-y-hueso/js"
 	],
 	"file_history":
 	[
+		"/git_repositorios/experiments/carne-y-hueso/README.md",
+		"/git_repositorios/experiments/carne-y-hueso/js/function.answercheck.js",
 		"/git_repositorios/experiments/carne-y-hueso/stylus/sections/nosotros.styl",
 		"/git_repositorios/experiments/carne-y-hueso/stylus/sections/nav.styl",
 		"/git_repositorios/experiments/carne-y-hueso/stylus/sections/loading.styl",
@@ -340,7 +345,6 @@
 		"/git_repositorios/experiments/carne-y-hueso/stylus/config/vars.styl",
 		"/git_repositorios/experiments/carne-y-hueso/stylus/global.styl",
 		"/git_repositorios/experiments/6dofsystems/index.html",
-		"/git_repositorios/experiments/carne-y-hueso/README.md",
 		"/git_repositorios/experiments/carne-y-hueso/.gitignore",
 		"/git_repositorios/experiments/carne-y-hueso/assets/stylus/main.styl",
 		"/git_repositorios/experiments/carne-y-hueso/user/themes/carneyhueso/carneyhueso.php",
@@ -628,15 +632,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9208,
+						"buffer_size": 7990,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9012,
-								9012
+								7919,
+								7919
 							]
 						],
 						"settings":
@@ -647,7 +651,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6672.0,
+						"translation.y": 6212.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -655,55 +659,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1486,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1276,
-								1276
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "process.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1179,
+						"buffer_size": 570,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1079,
-								1079
+								470,
+								470
 							]
 						],
 						"settings":
 						{
 							"auto_name": "process.php",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -712,6 +686,36 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19821,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7185,
+								7185
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3415.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

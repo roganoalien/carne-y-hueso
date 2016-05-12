@@ -326,10 +326,10 @@
 					<h2>Contacto</h2>
 					<img src="build/img/txt-contacto.png" alt="Contacto title" class="contacto-h2">
 				</div>
-				<form id="contact" name="contact" method="POST">
-					<input type="text" name="name" placeholder="Nombre" class="left">
-					<input type="email" name="email" class="right" placeholder="Email">
-					<input type="tel" name="tel" placeholder="Teléfono" class="hundred">
+				<form id="contact" name="contact" method="POST" action="process.php">
+					<input type="text" name="name" placeholder="Nombre" class="left" required>
+					<input type="email" name="email" class="right" placeholder="Email" required>
+					<input type="tel" name="tel" placeholder="Teléfono" class="hundred" required>
 					<select name="carne-uno" id="select-meat-one" class="first-to-select left show">
 						<option value="none" class="default-select">Selecciona un Corte</option>
 						<option value="t-bone">T-Bone</option>
@@ -410,9 +410,10 @@
 					</select>
 					<div class="add-selects"><p>+</p></div>
 					<input type="text" name="place" placeholder="Lugar de entrega" class="hundred">
-					<textarea name="pedido" placeholder="¿En qué podemos servirte?" class="hundredtext"></textarea>
+					<textarea name="pedido" placeholder="¿En qué podemos servirte?" class="hundredtext" required></textarea>
 					<input type="submit" value="Enviar" class="half-centered send-form">
 				</form>
+				<div id="form-messages"></div> <!-- PARA HACER POPUP -->
 			</article>
 		</section>
 		<footer>
