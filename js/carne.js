@@ -10,6 +10,7 @@ var CARNE = (function() {
 		CARNE.scrollMagic.init();
 		CARNE.scroll.init(); //LLAMAR AL FINAL DEL LOADER
 		CARNE.cortes.init();
+		CARNE.formSend.init();
 	};
 	return {
 		init : function init(){
@@ -311,64 +312,7 @@ CARNE.scrollMagic = (function() {
 })();
 CARNE.formSend = (function() {
 	var _processForm = function _processForm(){
-		jQuery.validator.addMethod('answercheck', function (value, element) {
-		        return this.optional(element) || /^\bcat\b$/.test(value);
-		    }, "type the correct answer -_-");
-		$('#contact').validate({
-			rules: {
-				name: {
-					required: true,
-					minlength: 4
-				},
-				email:{
-					required: true,
-					email: true
-				},
-				message:{
-					required: true,
-					minlength: 6
-				},
-				answer:{
-					required: true,
-					answercheck: true
-				}
-			},
-			messages: {
-				name:{
-					required: "Necesitamos tu nombre para poder ubicarte",
-					minlength: "Tu nombre debe de tener más de 4 letras"
-				},
-				email:{
-					required: "Para poder responderte y tenerte en nuestra base de datos ocupamos tu correo"
-				},
-				message:{
-					required: "Por favor escribe las especificaciones de tu entrega, indicaciones, comentarios o sugerencias",
-					minlength: "Ocupa tener más letras para poder entenderte de forma correcta"
-				},
-				answer:{
-					required: "sorry, wrong answer!"
-				}
-			},
-			submitHandler: function(form){
-				$(form).ajaxSubmit({
-					type:"POST",
-					data:$(form).serialize(),
-					url:"process.php",
-					success: function(){
-						$('#contact :input').attr('disabled', 'disabled');
-						$('#contact').fadeTo("slow", 0.15, function(){
-							$(this).find(':input').attr('disabled', 'disabled');
-							$('#success').fadeIn();
-						});
-					},
-					error: function(){
-						$('#contact').fadeTo("slow", 0.15, function(){
-							$('#error').fadeIn();
-						});
-					}
-				});
-			}
-		});
+		// http://blog.teamtreehouse.com/create-ajax-contact-form
 	};
 	return{
 		init : function init(){
