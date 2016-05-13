@@ -10,7 +10,10 @@ var CARNE = (function() {
 		CARNE.scrollMagic.init();
 		CARNE.scroll.init(); //LLAMAR AL FINAL DEL LOADER
 		CARNE.cortes.init();
-		CARNE.formSend.init();
+		$('#send-the-form').on('click', function(event){
+			event.preventDefault();
+			CARNE.formSend.init();
+		});
 	};
 	return {
 		init : function init(){
@@ -313,39 +316,8 @@ CARNE.scrollMagic = (function() {
 CARNE.formSend = (function() {
 	var _$form;
 	var _processForm = function _processForm(){
-		// http://blog.teamtreehouse.com/create-ajax-contact-form
-		_$form = $('#contact');
-		_$formMessages = $('#form-messages');
-		_$form.submit(function(event){
-			event.preventDefault();
-			var _formData = _$form.serialize();
-			$.ajax({
-				type: 'POST',
-				url: _$form.attr('action'),
-				data: _formData
-			})
-			.done(function(response){
-				//Make sure that the formMessages div has the 'success' class
-				_$formMessages.removeClass('error');
-				_$formMessages.addClass('success');
-				//Set the message text
-				//RESPUESTA DEL POPUP
-				_$formMessages.text(response);
-				//Clear the Form
-				// TODO PARA CLEREAR EL FORM
-			})
-			.fail(function(data){
-				//Make sure that the _$formMessages div has the 'error' class
-				_$formMessages.removeClass('success');
-				_$formMessages.addClass('error');
-				//Set the message text
-				if(data.responseText !== ''){
-					_$formMessages.text(data.responseText);
-				} else {
-					_$formMessages.text('Parece que algo salió mal, por favor vuelve a intentarlo');
-				}
-			});
-		});
+		console.log("procesando");
+		//http://code.tutsplus.com/tutorials/submit-a-form-without-page-refresh-using-jquery--net-59
 	};
 	return{
 		init : function init(){
