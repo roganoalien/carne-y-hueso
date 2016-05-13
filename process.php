@@ -26,12 +26,12 @@
     	$tel = $_POST["tel"];
     	$meat1 = $_POST["carne-uno"];
     	$qt1 = $_POST["cantidad-uno"];
-    	$meat1 = $_POST["carne-dos"];
-    	$qt1 = $_POST["cantidad-dos"];
-    	$meat1 = $_POST["carne-tres"];
-    	$qt1 = $_POST["cantidad-tres"];
-    	$meat1 = $_POST["carne-cuatro"];
-    	$qt1 = $_POST["cantidad-cuatro"];
+    	$meat2 = $_POST["carne-dos"];
+    	$qt2 = $_POST["cantidad-dos"];
+    	$meat3 = $_POST["carne-tres"];
+    	$qt3 = $_POST["cantidad-tres"];
+    	$meat4 = $_POST["carne-cuatro"];
+    	$qt4 = $_POST["cantidad-cuatro"];
 		$address = $_POST["place"];
 		$message = trim($_POST["pedido"]);
 
@@ -56,6 +56,7 @@
 	    $email_content .= "Teléfono: $tel\n\n";
 	    $email_content .= "Dirección: $address\n\n";
 	    $email_content .= "Message:\n$message\n";
+	    $email_content .= "Pedido:\n$meat1 $qt1\n $meat2 $qt2\n $meat3 $qt3\n $meat4 $qt4\n";
 
 	    // Build the email headers.
 	    $email_headers = "From: $name <$email>";
