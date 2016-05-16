@@ -434,19 +434,26 @@
 	<script src="js/carne.js"></script>
 	<script src="js/libs/perfect-scrollbar.js"></script>
 	<script type="text/javascript">
-		Ps.initialize(document.getElementById('container'), {
-			wheelSpeed: 1,
-			wheelPropagation: true,
-			swipePropagation: true,
-			minScrollbarLength: 20,
-			suppressScrollX: true
-		});
-		Ps.initialize(document.getElementById('popup-container'), {
-			wheelSpeed: 1,
-			wheelPropagation: false,
-			swipePropagation: false,
-			minScrollbarLength: 20
-		});
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			alert("es móvil");
+			$('#container').addClass('isMobile');
+			$('#popup-container').addClass('isMobile');
+		} else {
+			alert("es desktop");
+			Ps.initialize(document.getElementById('container'), {
+				wheelSpeed: 1,
+				wheelPropagation: true,
+				swipePropagation: true,
+				minScrollbarLength: 20,
+				suppressScrollX: true
+			});
+			Ps.initialize(document.getElementById('popup-container'), {
+				wheelSpeed: 1,
+				wheelPropagation: false,
+				swipePropagation: false,
+				minScrollbarLength: 20
+			});
+		}
 		// $(window).resize(function(){
 		// 	Ps.update(document.getElementById('container'));
 		// });

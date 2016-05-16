@@ -235,16 +235,24 @@
 			"file": "js/carne.js",
 			"settings":
 			{
-				"buffer_size": 8976,
+				"buffer_size": 8152,
 				"line_ending": "Unix",
 				"name": "carne.js"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 19943,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "process.php",
 			"settings":
 			{
-				"buffer_size": 2814,
+				"buffer_size": 2905,
 				"line_ending": "Unix",
 				"name": "process.php"
 			}
@@ -469,6 +477,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"(){});\n",
 			"uno",
 			"input",
 			"parrilla móvil",
@@ -595,8 +604,7 @@
 			"_stepOne",
 			"_stepThree_2",
 			"_stepTwo_2",
-			"_stepOne_2",
-			"_stepOne"
+			"_stepOne_2"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -615,7 +623,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -624,15 +632,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8976,
+						"buffer_size": 8152,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8886,
-								8886
+								6823,
+								6823
 							]
 						],
 						"settings":
@@ -643,27 +651,57 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6764.0,
+						"translation.y": 6327.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "process.php",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2814,
+						"buffer_size": 19943,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2092,
-								2092
+								18279,
+								18279
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 8552.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "process.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2230,
+								2230
 							]
 						],
 						"settings":
@@ -674,10 +712,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 386.0,
+						"translation.y": 384.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

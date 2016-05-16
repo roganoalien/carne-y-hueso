@@ -4213,6 +4213,9 @@ body .body-container {
 body .body-container.no-scroll {
   overflow: hidden;
 }
+body .body-container.isMobile {
+  overflow-y: auto;
+}
 body .body-container h2 {
   color: #382e2a;
   font-family: Arial, sans-serif;
@@ -5386,6 +5389,9 @@ header .r-nav ul li a {
   position: absolute;
   top: 0;
   width: 100%;
+}
+.cut-popup .popup-container .info .content.isMobile {
+  overflow-y: auto;
 }
 @media all and (max-width: 480px) {
   .cut-popup .popup-container .info .content {
