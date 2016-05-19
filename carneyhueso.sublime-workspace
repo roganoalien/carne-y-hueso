@@ -244,7 +244,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 19943,
+				"buffer_size": 20212,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/global.styl",
+			"settings":
+			{
+				"buffer_size": 2589,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylus/sections/popup.styl",
+			"settings":
+			{
+				"buffer_size": 2901,
 				"line_ending": "Unix"
 			}
 		},
@@ -328,7 +344,8 @@
 	"expanded_folders":
 	[
 		"/git_repositorios/experiments/carne-y-hueso",
-		"/git_repositorios/experiments/carne-y-hueso/js"
+		"/git_repositorios/experiments/carne-y-hueso/stylus",
+		"/git_repositorios/experiments/carne-y-hueso/stylus/sections"
 	],
 	"file_history":
 	[
@@ -477,6 +494,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"content",
+			"popup-container",
 			"(){});\n",
 			"uno",
 			"input",
@@ -602,9 +621,7 @@
 			"_pasoUno",
 			"pasoUno",
 			"_stepOne",
-			"_stepThree_2",
-			"_stepTwo_2",
-			"_stepOne_2"
+			"_stepThree_2"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -651,7 +668,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6327.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -663,15 +680,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19943,
+						"buffer_size": 20212,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18279,
-								18279
+								19636,
+								19636
 							]
 						],
 						"settings":
@@ -681,7 +698,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 8552.0,
+						"translation.y": 10598.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -689,6 +706,66 @@
 				},
 				{
 					"buffer": 2,
+					"file": "stylus/global.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								447,
+								413
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "stylus/sections/popup.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1204,
+								1204
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 783.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "process.php",
 					"semi_transient": false,
 					"settings":
@@ -715,7 +792,7 @@
 						"translation.y": 384.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
